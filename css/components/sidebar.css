@@ -1,0 +1,50 @@
+/* Aronnax Styles: Sidebar (pure CSS) */
+
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+  border-right: 2px solid black;
+  padding: 2rem 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* When toggle is checked, show the sidebar */
+.sidebar-toggle:checked + .sidebar {
+  transform: translateX(0);
+}
+
+/* Overlay to dim the background */
+.sidebar + .sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar-toggle:checked + .sidebar + .sidebar-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Close button inside the sidebar */
+.sidebar-close {
+  display: block;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
