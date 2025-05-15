@@ -25,7 +25,6 @@ body {
   font-family: system-ui, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 2rem;
 }
 
 /* Default Element Styles */
