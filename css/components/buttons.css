@@ -9,6 +9,7 @@
   border: 2px solid black;
   background-color: black;
   color: white;
+  font-size: 0.875rem;
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
 }

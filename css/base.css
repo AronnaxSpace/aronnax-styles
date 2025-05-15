@@ -28,11 +28,40 @@ body {
 }
 
 /* Default Element Styles */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Links */
 a {
-  color: inherit;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+a:hover {
   text-decoration: none;
 }
 
+/* Buttons */
 button {
   font: inherit;
   cursor: pointer;
@@ -40,6 +69,29 @@ button {
   background: none;
 }
 
+/* Lists */
 ul, ol {
-  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-left: 4px solid var(--primary-color);
+  font-style: italic;
+}
+
+/* Code */
+code {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
 }
