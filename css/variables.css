@@ -1,0 +1,16 @@
+/* Aronnax Styles: CSS Variables */
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #e2e8f0;
+
+  --text-color: #111;
+  --bg-color: #f9f9f9;
+
+  --border-radius: 1rem;
+  --rounded-full: 9999px;
+  --padding: 1rem;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
