@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aronnax Styles Demo</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <style>
+    /* Demo layout styling */
+    body {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .btn + .btn {
+      margin-left: 1rem;
+    }
+
+    .card {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aronnax Styles: Component Showcase</h1>
+
+  <section>
+    <h2>Buttons</h2>
+    <button class="btn">Primary Button</button>
+    <button class="btn btn-outline">Outline Button</button>
+    <button class="btn" disabled>Disabled Button</button>
+  </section>
+
+  <section>
+    <h2>Cards</h2>
+    <div class="card">
+      <h3>Card Title</h3>
+      <p>
+        This is a basic card component. It's styled with padding, shadows, and border-radius.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Card Variants</h2>
+
+    <div class="card card-post">
+      <h3>Understanding CSS Grid</h3>
+      <p>Learn how to use CSS Grid to build responsive layouts easily and intuitively.</p>
+    </div>
+
+    <div class="card card-shop-item">
+      <img src="images/cat.jpg" alt="Sample Product" />
+      <h3>Minimalist Lamp</h3>
+      <div class="price">$49.99</div>
+    </div>
+
+    <div class="card card-event">
+      <h3>Design Conference 2025</h3>
+      <div class="event-meta">March 18, 2025 · San Francisco, CA</div>
+      <p>Join 1000+ creatives for talks, workshops, and networking.</p>
+    </div>
+  </section>
+</body>
+</html>
