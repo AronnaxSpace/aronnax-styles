@@ -17,14 +17,17 @@
       <h2 class="mb-2">Buttons</h2>
       <div class="flex gap items-center flex-wrap">
         <button class="btn">
-          <i class="fas fa-download mr-2"></i> Download
+          <i class="fas fa-download"></i> Download
         </button>
         <button class="btn btn-outline">
-          <i class="fas fa-arrow-right mr-2"></i> Continue
+          <i class="fas fa-arrow-right"></i> Continue
         </button>
         <button class="btn" disabled>
-          <i class="fas fa-ban mr-2"></i> Disabled
+          <i class="fas fa-ban"></i> Disabled
         </button>
+        <label for="modal-toggle" class="btn">
+          <i class="fas fa-info-circle"></i> Open Modal
+        </label>
       </div>
     </section>
 
@@ -64,6 +67,19 @@
 
       </div>
     </section>
+
+    <!-- Modal Toggle Checkbox -->
+    <input type="checkbox" id="modal-toggle" class="modal-toggle">
+
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <h3>Pure CSS Modal</h3>
+        <p>This modal opens and closes without any JavaScript.</p>
+        <!-- Close button (label toggles checkbox off) -->
+        <label for="modal-toggle" class="close-btn">Close</label>
+      </div>
+    </div>
 
   </div>
 

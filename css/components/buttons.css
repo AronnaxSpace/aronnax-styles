@@ -18,6 +18,10 @@
   color: black;
 }
 
+.btn i {
+  margin-right: 0.5rem;
+}
+
 /* Outline Button Variant */
 .btn-outline {
   background-color: transparent;
