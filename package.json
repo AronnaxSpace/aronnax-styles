@@ -4,7 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss css/main.css -o dist/aronnax.min.css"
+    "dev:css": "postcss css/main.css -o dist/aronnax.css",
+    "dev:js": "esbuild js/main.js --bundle --outfile=dist/aronnax.js",
+    "dev": "npm run dev:css && npm run dev:js",
+    "build:css": "NODE_ENV=production postcss css/main.css -o dist/aronnax.min.css",
+    "build:js": "esbuild js/main.js --bundle --outfile=dist/aronnax.min.js --minify",
+    "build": "npm run build:css && npm run build:js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.7",
+    "esbuild": "^0.25.4",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0"
