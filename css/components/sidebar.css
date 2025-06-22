@@ -8,14 +8,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: var(--sidebar-width);
   height: 100%;
-  background: white;
-  border-right: 2px solid black;
-  padding: 2rem 1rem;
+  background: var(--white);
+  border-right: var(--border-width) solid var(--border-color);
+  padding: var(--padding-lg) var(--padding);
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
+  transition: transform var(--transition-normal);
+  z-index: var(--z-modal);
 }
 
 /* When toggle is checked, show the sidebar */
@@ -27,11 +27,11 @@
 .sidebar + .sidebar-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--overlay-light);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 999;
+  transition: opacity var(--transition-normal);
+  z-index: var(--z-overlay);
 }
 
 .sidebar-toggle:checked + .sidebar + .sidebar-overlay {
@@ -42,9 +42,9 @@
 /* Close button inside the sidebar */
 .sidebar-close {
   display: block;
-  margin-top: 2rem;
-  font-weight: bold;
-  color: black;
+  margin-top: var(--padding-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
   text-decoration: underline;
   cursor: pointer;
 }

@@ -1,21 +1,21 @@
 /* Aronnax Styles: Cards */
 
 .card {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: var(--border-radius);
   padding: var(--padding);
-  border: 2px solid black;
+  border: var(--border-width) solid var(--border-color);
   box-shadow: none;
 }
 
 .card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--text-h4);
+  margin-bottom: var(--margin-sm);
 }
 
 .card p {
-  font-size: 0.95rem;
-  color: #444;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
 }
 
 /* Shop Item Card */
@@ -24,12 +24,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.75rem;
+  gap: var(--margin-md);
 }
 
 .card-shop-item img {
   max-width: 100%;
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius-md);
 }
 
 .card-shop-item h3 {
@@ -37,20 +37,20 @@
 }
 
 .card-shop-item .price {
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
 }
 
 /* Event Card */
 .card-event {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--margin-sm);
 }
 
 .card-event .event-meta {
-  font-size: 0.875rem;
-  color: #666;
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
 }
 
 .card-event h3 {

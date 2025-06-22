@@ -4,35 +4,36 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.5rem;
+  padding: var(--padding-sm) var(--space-5);
   border-radius: var(--rounded-full);
-  border: 2px solid black;
-  background-color: black;
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border: var(--border-width) solid var(--border-color);
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .btn:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--white);
+  color: var(--primary-color);
 }
 
 .btn i {
-  margin-right: 0.5rem;
+  margin-right: var(--margin-sm);
 }
 
 /* Outline Button Variant */
 .btn-outline {
   background-color: transparent;
-  color: black;
-  border: 2px solid black;
+  color: var(--primary-color);
+  border: var(--border-width) solid var(--border-color);
 }
 
 .btn-outline:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 /* Disabled Button */

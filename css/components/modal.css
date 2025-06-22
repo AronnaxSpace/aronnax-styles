@@ -10,20 +10,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--overlay-dark);
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: var(--z-modal);
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 2rem;
-  border: 2px solid black;
+  background-color: var(--white);
+  padding: var(--padding-lg);
+  border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
-  max-width: 500px;
-  width: 90%;
+  max-width: var(--modal-max-width);
+  width: var(--container-max-width);
   text-align: center;
 }
 
@@ -34,12 +34,12 @@
 
 /* Close button */
 .modal .close-btn {
-  margin-top: 1rem;
+  margin-top: var(--margin-lg);
   display: inline-block;
-  background: black;
-  color: white;
-  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--padding-sm) var(--padding);
   border-radius: var(--rounded-full);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }

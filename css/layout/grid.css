@@ -3,13 +3,13 @@
   display: grid;
 }
 .gap {
-  gap: 1rem;
+  gap: var(--gap-base);
 }
 .gap-sm {
-  gap: 0.5rem;
+  gap: var(--gap-sm);
 }
 .gap-lg {
-  gap: 2rem;
+  gap: var(--gap-lg);
 }
 
 /* Default (mobile first) */
