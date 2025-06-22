@@ -7,7 +7,7 @@
 /* xl: 1280px */
 
 :root {
-  /* Colors */
+  /* Colors - Light Mode (default) */
   --primary-color: #000;
   --secondary-color: #e2e8f0;
   --white: #fff;
@@ -90,4 +90,46 @@
   --gap-sm: 0.5rem;
   --gap-base: 1rem;
   --gap-lg: 2rem;
+}
+
+/* Dark Mode - Auto (respects system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors - Dark Mode */
+    --primary-color: #fff;
+    --secondary-color: #374151;
+    --white: #111827;
+
+    --text-color: #f9fafb;
+    --text-muted: #d1d5db;
+    --text-light: #9ca3af;
+    --bg-color: #0f172a;
+    --code-bg: #374151;
+
+    --border-color: #fff;
+
+    /* Dark mode overlays */
+    --overlay-light: rgba(255, 255, 255, 0.1);
+    --overlay-dark: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Dark Mode - Manual Toggle (using [data-mode="dark"] on html/body) */
+[data-mode="dark"] {
+  /* Colors - Dark Mode */
+  --primary-color: #fff;
+  --secondary-color: #374151;
+  --white: #111827;
+
+  --text-color: #f9fafb;
+  --text-muted: #d1d5db;
+  --text-light: #9ca3af;
+  --bg-color: #0f172a;
+  --code-bg: #374151;
+
+  --border-color: #fff;
+
+  /* Dark mode overlays */
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-dark: rgba(255, 255, 255, 0.2);
 }

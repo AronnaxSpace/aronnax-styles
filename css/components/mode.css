@@ -1,0 +1,58 @@
+/* Aronnax Styles: Mode Utilities (Dark/Light Mode) */
+
+/* Mode transition for smooth switching */
+*,
+*::before,
+*::after {
+  transition: background-color var(--transition-normal), 
+              color var(--transition-normal), 
+              border-color var(--transition-normal);
+}
+
+/* Mode toggle button styling */
+.mode-toggle {
+  position: relative;
+  min-width: 120px;
+}
+
+.mode-toggle .toggle-text {
+  margin-left: var(--margin-sm);
+}
+
+/* Prevent transitions on page load */
+.no-transition * {
+  transition: none !important;
+}
+
+/* Dark mode specific adjustments */
+[data-mode="dark"] {
+  color-scheme: dark;
+}
+
+[data-mode="dark"] .card {
+  background-color: var(--white);
+  border-color: var(--border-color);
+}
+
+[data-mode="dark"] .modal-content {
+  background-color: var(--white);
+  border-color: var(--border-color);
+}
+
+[data-mode="dark"] .sidebar {
+  background-color: var(--white);
+  border-color: var(--border-color);
+}
+
+/* Code blocks in dark mode */
+[data-mode="dark"] code {
+  background-color: var(--code-bg);
+  color: var(--text-color);
+}
+
+/* Optional: Images in dark mode */
+/* 
+[data-mode="dark"] img {
+  filter: brightness(0.8) contrast(1.2);
+}
+*/

@@ -25,6 +25,11 @@ body {
   color: var(--text-color);
 }
 
+/* Prevent flash on page load */
+body.no-transition * {
+  transition: none !important;
+}
+
 /* Default Element Styles */
 
 /* Headings */
