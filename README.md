@@ -56,3 +56,82 @@ For icons, include Font Awesome:
 ## 📄 Demo
 
 Open `index.html` in your browser to see all components in action and explore the complete component showcase.
+
+## 🎨 Themes
+
+Aronnax Styles includes multiple themes, each with its own design personality:
+
+### Available Themes
+
+- **Minimal** (default) - Clean and simple with basic styling
+- **Elegant** - Refined serif fonts, subtle shadows, sophisticated feel
+- **Modern** - Tech-focused, pronounced shadows, sharp and efficient
+- **Playful** - Vibrant colors, bouncy animations, gradients, and creative effects
+- **Sharp** - Ultra-minimal with zero border radius, clean lines, and angular precision
+
+### Using Themes
+
+**HTML Attribute:**
+```html
+<html data-theme="sharp">
+  <!-- Your content -->
+</html>
+```
+
+**JavaScript:**
+```javascript
+// Set a theme
+setTheme('sharp');
+
+// Get current theme
+const current = getCurrentTheme();
+
+// Get all available themes
+const themes = getAvailableThemes();
+```
+
+### Dark/Light Mode
+
+**HTML Attribute:**
+```html
+<html data-mode="dark">
+  <!-- Your content -->
+</html>
+```
+
+**JavaScript:**
+```javascript
+// Toggle between dark and light
+toggleMode();
+
+// Set specific appearance (theme + mode)
+setAppearance('sharp', 'dark');
+```
+
+## 📦 Components
+
+### Buttons
+- Basic buttons with variants (success, danger, warning, info, secondary)
+- Outline button style
+- Disabled state
+- Icon support
+
+### Forms
+- Input fields (text, email, tel, file, etc.)
+- Textarea and select elements
+- Validation states (error, success, warning)
+- Checkboxes and radio buttons
+- Form layout helpers
+
+### Cards
+- Basic card component
+- Card variants for different content types
+
+### Layout
+- Responsive grid system
+- Flexbox utilities
+- Container and spacing classes
+
+### Modals & Sidebars
+- Pure CSS modal (no JavaScript required)
+- Sliding sidebar component
