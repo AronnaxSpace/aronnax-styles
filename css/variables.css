@@ -7,6 +7,10 @@
 /* xl: 1280px */
 
 :root {
+  /* ========================================
+     BASE DESIGN TOKENS (shared across all themes)
+  ======================================== */
+
   /* Colors - Light Mode (default) */
   --primary-color: #000;
   --secondary-color: #e2e8f0;
@@ -18,23 +22,16 @@
   --bg-color: #f9f9f9;
   --code-bg: #eee;
 
-  /* Border & Radius */
+  /* Semantic Colors (Button Variants) */
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+
+  /* Border Colors */
   --border-color: #000;
-  --border-width: 2px;
-  --border-radius: 1rem;
-  --border-radius-sm: 0.25rem;
-  --border-radius-md: 0.75rem;
-  --rounded-full: 9999px;
 
-  /* Spacing */
-  --padding: 1rem;
-  --padding-sm: 0.5rem;
-  --padding-lg: 2rem;
-  --margin-sm: 0.5rem;
-  --margin-md: 0.75rem;
-  --margin-lg: 1rem;
-
-  /* Spacing Scale */
+  /* Base Spacing Scale (shared) */
   --space-0: 0;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -43,8 +40,7 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
 
-  /* Typography */
-  --font-family: system-ui, sans-serif;
+  /* Base Typography Scale (shared) */
   --font-family-mono: monospace;
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
@@ -57,7 +53,7 @@
   --font-weight-semibold: 600;
   --font-weight-bold: bold;
 
-  /* Font Sizes */
+  /* Font Size Scale (shared) */
   --text-h1: 2rem;
   --text-h2: 1.75rem;
   --text-h3: 1.5rem;
@@ -65,11 +61,12 @@
   --text-h5: 1.125rem;
   --text-h6: 1rem;
 
-  /* Shadows */
+  /* Base Shadow Definitions */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 
-  /* Transitions */
+  /* Transitions (shared) */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
 
@@ -77,19 +74,46 @@
   --overlay-light: rgba(0, 0, 0, 0.4);
   --overlay-dark: rgba(0, 0, 0, 0.6);
 
-  /* Z-index */
+  /* Z-index (shared) */
   --z-overlay: 999;
   --z-modal: 1000;
 
-  /* Sizes */
+  /* Component Sizes (shared) */
   --sidebar-width: 250px;
   --modal-max-width: 500px;
   --container-max-width: 90%;
 
-  /* Grid Gaps */
+  /* Grid Gaps (shared) */
   --gap-sm: 0.5rem;
   --gap-base: 1rem;
   --gap-lg: 2rem;
+
+  /* ========================================
+     DEFAULT THEME: MINIMAL
+  ======================================== */
+
+  /* Theme-specific Typography */
+  --font-family: system-ui, sans-serif;
+
+  /* Theme-specific Border & Radius */
+  --border-width: 2px;
+  --border-radius: 1rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.75rem;
+  --rounded-full: 9999px;
+
+  /* Theme-specific Spacing */
+  --padding: 1rem;
+  --padding-sm: 0.5rem;
+  --padding-lg: 2rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 0.75rem;
+  --margin-lg: 1rem;
+
+  /* Theme-specific Shadow Usage */
+  --card-shadow: none;
+  --button-shadow: none;
+  --modal-shadow: none;
 }
 
 /* Dark Mode - Auto (respects system preference) */
@@ -107,6 +131,12 @@
     --code-bg: #374151;
 
     --border-color: #fff;
+
+    /* Semantic Colors (Button Variants) - Dark Mode */
+    --success-color: #20c997;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
 
     /* Dark mode overlays */
     --overlay-light: rgba(255, 255, 255, 0.1);
@@ -128,6 +158,12 @@
   --code-bg: #374151;
 
   --border-color: #fff;
+
+  /* Semantic Colors (Button Variants) - Dark Mode */
+  --success-color: #20c997;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #3498db;
 
   /* Dark mode overlays */
   --overlay-light: rgba(255, 255, 255, 0.1);

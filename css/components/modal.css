@@ -22,6 +22,7 @@
   padding: var(--padding-lg);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--modal-shadow);
   max-width: var(--modal-max-width);
   width: var(--container-max-width);
   text-align: center;

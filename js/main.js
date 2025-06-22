@@ -58,6 +58,102 @@ function initializeMode() {
   }, 100);
 }
 
+/* ========================================
+   THEME MANAGEMENT FUNCTIONS
+======================================== */
+
+// Available themes
+const availableThemes = ['minimal', 'elegant', 'modern', 'playful'];
+
+// Set specific theme
+function setTheme(themeName) {
+  if (!availableThemes.includes(themeName)) {
+    console.warn(`Theme "${themeName}" not available. Available themes:`, availableThemes);
+    return;
+  }
+  
+  document.documentElement.setAttribute('data-theme', themeName);
+  localStorage.setItem('theme', themeName);
+  
+  // Update theme selector if it exists
+  const themeSelector = document.querySelector('.theme-selector');
+  if (themeSelector) {
+    themeSelector.value = themeName;
+  }
+  
+  console.log(`Theme changed to: ${themeName}`);
+}
+
+// Get current theme
+function getCurrentTheme() {
+  return document.documentElement.getAttribute('data-theme') || 'minimal';
+}
+
+// Get available themes
+function getAvailableThemes() {
+  return [...availableThemes];
+}
+
+// Initialize theme on page load
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'minimal';
+  setTheme(savedTheme);
+}
+
+// Combined appearance function (theme + mode)
+function setAppearance(theme, mode) {
+  setTheme(theme);
+  
+  const currentMode = document.documentElement.getAttribute('data-mode');
+  if (currentMode !== mode) {
+    document.documentElement.setAttribute('data-mode', mode);
+    localStorage.setItem('mode', mode);
+  }
+  
+  console.log(`Appearance set to: ${theme} theme, ${mode} mode`);
+}
+
+// Update display of current theme and mode
+function updateCurrentDisplay() {
+  const currentTheme = getCurrentTheme();
+  const currentMode = document.documentElement.getAttribute('data-mode') || 'light';
+  
+  const themeDisplay = document.getElementById('current-theme');
+  const modeDisplay = document.getElementById('current-mode');
+  const playfulShowcase = document.getElementById('playful-showcase');
+  
+  if (themeDisplay) {
+    themeDisplay.textContent = currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
+  }
+  
+  if (modeDisplay) {
+    modeDisplay.textContent = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
+  }
+  
+  // Show/hide playful showcase
+  if (playfulShowcase) {
+    if (currentTheme === 'playful') {
+      playfulShowcase.style.display = 'block';
+    } else {
+      playfulShowcase.style.display = 'none';
+    }
+  }
+}
+
+// Override setTheme to update display
+const originalSetTheme = setTheme;
+setTheme = function(themeName) {
+  originalSetTheme(themeName);
+  updateCurrentDisplay();
+}
+
+// Override toggleMode to update display
+const originalToggleMode = toggleMode;
+toggleMode = function() {
+  originalToggleMode();
+  updateCurrentDisplay();
+}
+
 // Listen for system mode changes
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
   if (!localStorage.getItem('mode')) {
@@ -65,8 +161,16 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
   }
 });
 
-// Initialize mode when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeMode);
+// Initialize both mode and theme when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  initializeMode();
+  initializeTheme();
+  updateCurrentDisplay();
+});
 
-// Make toggleMode globally available
+// Make functions globally available
 window.toggleMode = toggleMode;
+window.setTheme = setTheme;
+window.getCurrentTheme = getCurrentTheme;
+window.getAvailableThemes = getAvailableThemes;
+window.setAppearance = setAppearance;
