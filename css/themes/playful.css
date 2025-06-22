@@ -316,20 +316,6 @@
   transform: translateY(-2px) rotate(5deg);
 }
 
-/* Theme selector styling */
-[data-theme="playful"] .theme-selector {
-  border: var(--border-width) solid var(--playful-secondary);
-  border-radius: var(--border-radius-sm);
-  background: var(--playful-gradient-1);
-  color: white;
-  font-weight: var(--font-weight-semibold);
-}
-
-[data-theme="playful"] .theme-selector:focus {
-  outline: 3px solid var(--playful-warning);
-  box-shadow: 0 0 10px rgba(254, 202, 87, 0.5);
-}
-
 /* Card variants with different colors */
 [data-theme="playful"] .card-post {
   background: linear-gradient(135deg, rgba(255,107,107,0.1) 0%, rgba(255,255,255,1) 50%);
@@ -389,6 +375,12 @@
   50% { box-shadow: 0 0 20px rgba(255,107,107,0.6), 0 0 30px rgba(78,205,196,0.3); }
 }
 
+@keyframes playful-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
 /* Apply fun animations */
 [data-theme="playful"] .card:hover {
   animation: float 2s ease-in-out infinite;
@@ -441,3 +433,72 @@
 [data-theme="playful"] .playful-rainbow:focus { animation: rainbow-border 2s linear infinite; }
 [data-theme="playful"] .playful-float { animation: float 3s ease-in-out infinite; }
 [data-theme="playful"] .playful-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* Form inputs with playful styling */
+[data-theme="playful"] .form-input,
+[data-theme="playful"] .form-textarea,
+[data-theme="playful"] .form-select {
+  border: var(--border-width) solid var(--playful-secondary);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+}
+
+[data-theme="playful"] .form-input:focus,
+[data-theme="playful"] .form-textarea:focus,
+[data-theme="playful"] .form-select:focus {
+  border-color: var(--playful-primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+  transform: scale(1.02);
+}
+
+[data-theme="playful"] .form-label {
+  color: var(--playful-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-theme="playful"] .form-label.required::after {
+  color: var(--playful-primary);
+}
+
+/* Playful form validation states */
+[data-theme="playful"] .form-group.error .form-input,
+[data-theme="playful"] .form-group.error .form-textarea,
+[data-theme="playful"] .form-group.error .form-select {
+  border-color: var(--playful-primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+  animation: playful-shake 0.5s ease-in-out;
+}
+
+[data-theme="playful"] .form-group.success .form-input,
+[data-theme="playful"] .form-group.success .form-textarea,
+[data-theme="playful"] .form-group.success .form-select {
+  border-color: var(--playful-success);
+  box-shadow: 0 0 0 3px rgba(72, 202, 139, 0.3);
+}
+
+[data-theme="playful"] .form-group.warning .form-input,
+[data-theme="playful"] .form-group.warning .form-textarea,
+[data-theme="playful"] .form-group.warning .form-select {
+  border-color: var(--playful-warning);
+  box-shadow: 0 0 0 3px rgba(254, 202, 87, 0.3);
+}
+
+/* Playful checkboxes and radios */
+[data-theme="playful"] .form-checkbox input[type="checkbox"]:checked,
+[data-theme="playful"] .form-radio input[type="radio"]:checked {
+  background: var(--playful-gradient-1);
+  border-color: var(--playful-primary);
+}
+
+/* Playful file input */
+[data-theme="playful"] .form-file-label {
+  background: var(--playful-gradient-2);
+  color: white;
+  border-color: var(--playful-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-theme="playful"] .form-file:hover .form-file-label {
+  background: var(--playful-gradient-3);
+  transform: translateY(-1px);
+}

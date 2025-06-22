@@ -76,7 +76,7 @@ function setTheme(themeName) {
   localStorage.setItem('theme', themeName);
   
   // Update theme selector if it exists
-  const themeSelector = document.querySelector('.theme-selector');
+  const themeSelector = document.querySelector('#theme-selector');
   if (themeSelector) {
     themeSelector.value = themeName;
   }
