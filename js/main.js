@@ -63,7 +63,7 @@ function initializeMode() {
 ======================================== */
 
 // Available themes
-const availableThemes = ['minimal', 'elegant', 'modern', 'playful'];
+const availableThemes = ['minimal', 'elegant', 'modern', 'playful', 'sharp'];
 
 // Set specific theme
 function setTheme(themeName) {
