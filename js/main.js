@@ -63,7 +63,7 @@ function initializeMode() {
 ======================================== */
 
 // Available themes
-const availableThemes = ['minimal', 'elegant', 'modern', 'playful', 'sharp'];
+const availableThemes = ['minimal', 'modern', 'sharp'];
 
 // Set specific theme
 function setTheme(themeName) {
@@ -120,7 +120,6 @@ function updateCurrentDisplay() {
   
   const themeDisplay = document.getElementById('current-theme');
   const modeDisplay = document.getElementById('current-mode');
-  const playfulShowcase = document.getElementById('playful-showcase');
   
   if (themeDisplay) {
     themeDisplay.textContent = currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
@@ -128,15 +127,6 @@ function updateCurrentDisplay() {
   
   if (modeDisplay) {
     modeDisplay.textContent = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
-  }
-  
-  // Show/hide playful showcase
-  if (playfulShowcase) {
-    if (currentTheme === 'playful') {
-      playfulShowcase.style.display = 'block';
-    } else {
-      playfulShowcase.style.display = 'none';
-    }
   }
 }
 

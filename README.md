@@ -64,9 +64,7 @@ Aronnax Styles includes multiple themes, each with its own design personality:
 ### Available Themes
 
 - **Minimal** (default) - Clean and simple with basic styling
-- **Elegant** - Refined serif fonts, subtle shadows, sophisticated feel
 - **Modern** - Tech-focused, pronounced shadows, sharp and efficient
-- **Playful** - Vibrant colors, bouncy animations, gradients, and creative effects
 - **Sharp** - Ultra-minimal with zero border radius, clean lines, and angular precision
 
 ### Using Themes

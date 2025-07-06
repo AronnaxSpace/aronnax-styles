@@ -16,9 +16,7 @@
     <section class="mb-4">
       <select id="theme-selector" class="form-select" onchange="setTheme(this.value)">
         <option value="minimal">Minimal</option>
-        <option value="elegant">Elegant</option>
         <option value="modern">Modern</option>
-        <option value="playful">Playful</option>
         <option value="sharp">Sharp</option>
       </select>
       <h2 class="mb-2">Themes & Modes</h2>
@@ -28,9 +26,7 @@
         <p>Try switching between different themes using the selector above. Each theme has its own personality:</p>
         <ul style="text-align: left; margin-top: 1rem;">
           <li><strong>Minimal:</strong> Clean, sharp borders, no shadows - perfect for modern interfaces</li>
-          <li><strong>Elegant:</strong> Refined serif fonts, subtle shadows, sophisticated feel</li>
           <li><strong>Modern:</strong> Tech-focused, pronounced shadows, sharp and efficient</li>
-          <li><strong>Playful:</strong> Vibrant colors, bouncy animations, gradients, and creative effects! 🌈</li>
           <li><strong>Sharp:</strong> Ultra-minimal with zero border radius, clean lines, and angular precision ⚡</li>
         </ul>
       </div>
@@ -334,42 +330,6 @@
 
     <!-- Overlay -->
     <div class="sidebar-overlay"></div>
-
-    <!-- Playful Theme Color Showcase (only visible in playful theme) -->
-    <section class="mb-4" style="display: none;" id="playful-showcase">
-      <h2 class="mb-2">🎨 Playful Theme Colors</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap">
-        <div class="card bg-playful-primary" style="color: white;">
-          <h3>Coral Magic</h3>
-          <p>Warm and inviting coral gradient background</p>
-        </div>
-        <div class="card bg-playful-secondary" style="color: white;">
-          <h3>Ocean Breeze</h3>
-          <p>Cool turquoise to purple gradient</p>
-        </div>
-        <div class="card bg-playful-accent" style="color: white;">
-          <h3>Sunny Delight</h3>
-          <p>Bright yellow to orange gradient</p>
-        </div>
-      </div>
-      <div class="mt-4">
-        <button class="btn playful-bounce">🎈 Bouncy Button</button>
-        <button class="btn playful-rainbow">🌈 Rainbow Border</button>
-        <span class="text-playful-primary playful-glow" style="font-weight: bold; font-size: 1.2rem;">✨ Glowing Text</span>
-      </div>
-      
-      <!-- Interactive Button Combinations -->
-      <div class="mt-4">
-        <h3 class="mb-2">🎭 Interactive Button Combinations</h3>
-        <div class="flex gap items-center flex-wrap">
-          <button class="btn btn-success playful-bounce">💚 Bounce Success</button>
-          <button class="btn btn-danger playful-rainbow">🔥 Rainbow Danger</button>
-          <button class="btn btn-warning btn-outline">⚠️ Warning Outline</button>
-          <button class="btn btn-info">💧 Cool Info</button>
-        </div>
-      </div>
-    </section>
-
   </div>
 
   <script src="js/main.js"></script>
