@@ -109,11 +109,6 @@ Aronnax Styles supports both global dark mode and theme-managed dark mode.
 </html>
 ```
 
-**Each theme has its own dark mode personality:**
-- **Minimal**: Uses global dark mode for consistency
-- **Modern**: Tech-focused dark mode with GitHub-inspired colors and glowing effects
-- **Sharp**: Ultra-minimal high-contrast dark mode with pure blacks and whites
-
 **JavaScript:**
 ```javascript
 // Toggle between dark and light
@@ -150,17 +145,3 @@ setAppearance('sharp', 'dark');
 ### Modals & Sidebars
 - Pure CSS modal (no JavaScript required)
 - Sliding sidebar component
-
-## 🎯 Design System
-
-### Design Tokens
-Aronnax Styles uses a modular design token system organized in `css/tokens/`:
-- **Colors**: Base palette, semantic colors, and dark mode support
-- **Typography**: Font families, sizes, weights, and line heights
-- **Spacing**: Spacing scale, padding, margins, and border radius
-- **Shadows**: Shadow definitions and theme-specific usage
-- **Animations**: Transition and animation timing
-- **Z-index**: Stacking context management
-- **Breakpoints**: Responsive design reference values
-
-See `css/tokens/README.md` for detailed documentation.
