@@ -27,7 +27,7 @@
 .sidebar + .sidebar-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--overlay-light);
+  background-color: var(--overlay-dark);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-normal);
