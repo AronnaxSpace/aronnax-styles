@@ -10,7 +10,7 @@
   --font-family: system-ui, sans-serif;
 
   /* Border & Radius - Rounded and friendly */
-  --border-width: 2px;
+  --border-width: 1px;
   --border-radius: 1rem;
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.75rem;
