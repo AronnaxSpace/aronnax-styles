@@ -1,0 +1,67 @@
+/* Aronnax Styles: Modern Theme Dark Mode */
+
+/* Modern theme specific dark mode with tech-focused aesthetics */
+[data-theme="modern"][data-mode="dark"] {
+  /* ========================================
+     MODERN THEME DARK MODE COLORS
+  ======================================== */
+
+  /* Use theme accent color as primary in dark mode */
+  --primary-color: #00d084;
+  --secondary-color: #1f2937;
+
+  /* Tech-focused dark backgrounds */
+  --bg-color: #0d1117;        /* GitHub-like dark background */
+  --white: #161b22;           /* Card/surface color */
+  --code-bg: #21262d;         /* Code block background */
+
+  /* Enhanced text contrast for dark mode */
+  --text-color: #f0f6fc;
+  --text-muted: #8b949e;
+  --text-light: #7d8590;
+
+  /* Modern theme dark mode semantic colors */
+  --success-color: #238636;   /* GitHub green */
+  --danger-color: #f85149;    /* GitHub red */
+  --warning-color: #d29922;   /* GitHub yellow */
+  --info-color: #58a6ff;      /* GitHub blue */
+
+  /* Borders in dark mode */
+  --border-color: #30363d;
+
+  /* Dark mode overlays with green tint */
+  --overlay-light: rgba(0, 208, 132, 0.1);
+  --overlay-dark: rgba(0, 208, 132, 0.2);
+}
+
+/* Modern theme dark mode specific adjustments */
+[data-theme="modern"][data-mode="dark"] .card {
+  background: linear-gradient(145deg, #161b22 0%, #0d1117 100%);
+  border-color: #21262d;
+}
+
+[data-theme="modern"][data-mode="dark"] .btn {
+  border-color: #30363d;
+}
+
+[data-theme="modern"][data-mode="dark"] .btn:hover {
+  background-color: #00d084;
+  color: #0d1117;
+  box-shadow: 0 0 20px rgba(0, 208, 132, 0.3);
+}
+
+[data-theme="modern"][data-mode="dark"] .form-input,
+[data-theme="modern"][data-mode="dark"] .form-textarea,
+[data-theme="modern"][data-mode="dark"] .form-select {
+  background-color: #21262d;
+  border-color: #30363d;
+  color: #f0f6fc;
+}
+
+[data-theme="modern"][data-mode="dark"] .form-input:focus,
+[data-theme="modern"][data-mode="dark"] .form-textarea:focus,
+[data-theme="modern"][data-mode="dark"] .form-select:focus {
+  border-bottom-color: #00d084;
+  box-shadow: 0 2px 0 #00d084;
+  background: rgba(0, 208, 132, 0.1);
+}

@@ -9,3 +9,8 @@
 @import './minimal/components.css';
 @import './modern/components.css';
 @import './sharp/components.css';
+
+/* Import theme-managed dark mode styles */
+@import './minimal/dark.css';
+@import './modern/dark.css';
+@import './sharp/dark.css';

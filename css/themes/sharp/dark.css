@@ -1,0 +1,88 @@
+/* Aronnax Styles: Sharp Theme Dark Mode */
+
+/* Sharp theme specific dark mode with ultra-minimal, high-contrast aesthetics */
+[data-theme="sharp"][data-mode="dark"] {
+  /* ========================================
+     SHARP THEME DARK MODE COLORS
+  ======================================== */
+
+  /* High contrast backgrounds - pure blacks and whites */
+  --bg-color: #000000;        /* Pure black background */
+  --white: #1a1a1a;          /* Card/surface color - very dark gray */
+  --code-bg: #0f0f0f;        /* Code block background */
+
+  /* Sharp contrast text colors */
+  --text-color: #ffffff;      /* Pure white text */
+  --text-muted: #b0b0b0;     /* High contrast muted text */
+  --text-light: #808080;     /* Light text still readable */
+
+  /* Sharp theme dark mode semantic colors - bright and contrasting */
+  --success-color: #00ff41;   /* Bright matrix green */
+  --danger-color: #ff0040;    /* Bright red */
+  --warning-color: #ffff00;   /* Pure yellow */
+  --info-color: #00bfff;      /* Bright cyan */
+
+  /* Minimal borders */
+  --border-color: #333333;    /* Dark gray borders */
+
+  /* No gradients or complex overlays - keep it minimal */
+  --overlay-light: rgba(255, 255, 255, 0.05);
+  --overlay-dark: rgba(255, 255, 255, 0.1);
+}
+
+/* Sharp theme dark mode specific adjustments - maintain angular design */
+[data-theme="sharp"][data-mode="dark"] .card {
+  background-color: var(--white);
+  border: var(--border-width) solid var(--border-color);
+  /* No shadows or gradients - keep it flat and minimal */
+}
+
+[data-theme="sharp"][data-mode="dark"] .btn {
+  background-color: transparent;
+  border: var(--border-width) solid var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme="sharp"][data-mode="dark"] .btn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  /* No shadows or smooth transitions - instant state change */
+}
+
+[data-theme="sharp"][data-mode="dark"] .btn:active {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme="sharp"][data-mode="dark"] .modal-content {
+  background-color: var(--white);
+  border: var(--border-width) solid var(--border-color);
+}
+
+[data-theme="sharp"][data-mode="dark"] .sidebar {
+  background-color: var(--white);
+  border-right: var(--border-width) solid var(--border-color);
+}
+
+/* Sharp form styling in dark mode - maintain clean lines */
+[data-theme="sharp"][data-mode="dark"] .form-input,
+[data-theme="sharp"][data-mode="dark"] .form-textarea,
+[data-theme="sharp"][data-mode="dark"] .form-select {
+  background-color: var(--bg-color);
+  border: var(--border-width) solid var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme="sharp"][data-mode="dark"] .form-input:focus,
+[data-theme="sharp"][data-mode="dark"] .form-textarea:focus,
+[data-theme="sharp"][data-mode="dark"] .form-select:focus {
+  border-color: var(--text-color);
+  background-color: var(--white);
+  /* No soft shadows or transitions - sharp state change */
+}
+
+/* Ensure text inputs have proper contrast */
+[data-theme="sharp"][data-mode="dark"] .form-input::placeholder,
+[data-theme="sharp"][data-mode="dark"] .form-textarea::placeholder {
+  color: var(--text-muted);
+}

@@ -90,12 +90,29 @@ const themes = getAvailableThemes();
 
 ### Dark/Light Mode
 
-**HTML Attribute:**
+Aronnax Styles supports both global dark mode and theme-managed dark mode.
+
+**Global Dark Mode:**
 ```html
 <html data-mode="dark">
-  <!-- Your content -->
+  <!-- Uses global dark mode colors -->
 </html>
 ```
+
+**Theme-Managed Dark Mode:**
+```html
+<html data-theme="modern" data-mode="dark">
+  <!-- Uses modern theme's custom dark mode -->
+</html>
+<html data-theme="sharp" data-mode="dark">
+  <!-- Uses sharp theme's custom dark mode -->
+</html>
+```
+
+**Each theme has its own dark mode personality:**
+- **Minimal**: Uses global dark mode for consistency
+- **Modern**: Tech-focused dark mode with GitHub-inspired colors and glowing effects
+- **Sharp**: Ultra-minimal high-contrast dark mode with pure blacks and whites
 
 **JavaScript:**
 ```javascript

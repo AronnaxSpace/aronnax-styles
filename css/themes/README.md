@@ -9,13 +9,16 @@ css/themes/
 ├── main.css                    # Entry point - imports all themes
 ├── minimal/
 │   ├── variables.css          # Minimal theme design tokens
-│   └── components.css         # Minimal theme component overrides
+│   ├── components.css         # Minimal theme component overrides
+│   └── dark.css               # Minimal theme dark mode (uses global dark mode)
 ├── modern/
 │   ├── variables.css          # Modern theme design tokens
-│   └── components.css         # Modern theme component overrides
+│   ├── components.css         # Modern theme component overrides
+│   └── dark.css               # Modern theme custom dark mode
 └── sharp/
     ├── variables.css          # Sharp theme design tokens
-    └── components.css         # Sharp theme component overrides
+    ├── components.css         # Sharp theme component overrides
+    └── dark.css               # Sharp theme custom dark mode
 ```
 
 ## Theme Organization
@@ -33,6 +36,13 @@ Each theme's components file contains:
 - **Form Styling**: Theme-specific form appearances
 - **Interactive States**: Hover, focus, and active states
 - **Layout Adjustments**: Theme-specific layout modifications
+
+### Dark Mode Files (`dark.css`)
+Each theme's dark mode file contains:
+- **Dark Mode Overrides**: Theme-specific dark mode color schemes
+- **Component Dark Styling**: Dark mode adjustments for components
+- **Accessibility**: High contrast and readability improvements
+- **Theme Consistency**: Maintains each theme's design philosophy in dark mode
 
 ## Benefits
 
@@ -68,12 +78,29 @@ Themes are activated using data attributes:
 <html data-theme="sharp">
 ```
 
+### Theme-Managed Dark Mode
+Each theme can define its own dark mode styling. Dark mode is activated by combining theme and mode attributes:
+```html
+<!-- Global dark mode (uses css/modes/dark.css) -->
+<html data-mode="dark">
+
+<!-- Theme-specific dark mode (uses theme's dark.css file) -->
+<html data-theme="modern" data-mode="dark">
+<html data-theme="sharp" data-mode="dark">
+```
+
+**Dark Mode Behavior:**
+- **Minimal theme**: Uses global dark mode from `css/modes/dark.css`
+- **Modern theme**: Uses custom tech-focused dark mode with GitHub-like colors
+- **Sharp theme**: Uses ultra-minimal high-contrast dark mode with pure blacks/whites
+
 ### Creating New Themes
 1. Create theme directory: `css/themes/mytheme/`
 2. Add `variables.css` with theme tokens
 3. Add `components.css` with component overrides
-4. Import both files in `css/themes/main.css`
-5. Update JavaScript theme list
+4. Add `dark.css` with theme-specific dark mode (or leave empty to use global dark mode)
+5. Import all files in `css/themes/main.css`
+6. Update JavaScript theme list
 
 ## Migration
 
