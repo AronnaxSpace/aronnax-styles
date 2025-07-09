@@ -1,0 +1,36 @@
+/* Aronnax Styles: Sharp Theme Variables */
+
+[data-theme="sharp"] {
+  /* ========================================
+     SHARP THEME DESIGN TOKENS
+  ======================================== */
+
+  /* Typography - Clean and minimal */
+  --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Border & Radius - Sharp corners, no rounding */
+  --border-width: 1px;
+  --border-radius: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --rounded-full: 0;
+
+  /* Spacing - Tight and precise */
+  --padding: 1rem;
+  --padding-sm: 0.5rem;
+  --padding-lg: 1.5rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 0.75rem;
+  --margin-lg: 1rem;
+
+  /* Shadows - None for ultra-minimal look */
+  --card-shadow: none;
+  --button-shadow: none;
+  --modal-shadow: none;
+
+  /* Sharp theme specific colors */
+  --success-color: #22c55e;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+}

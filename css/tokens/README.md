@@ -23,6 +23,19 @@ css/modes/
 ├── main.css          # Mode system entry point
 ├── light.css         # Light mode color definitions
 └── dark.css          # Dark mode color definitions
+
+css/themes/
+├── main.css          # Theme system entry point
+├── README.md         # Theme system documentation
+├── minimal/
+│   ├── variables.css # Minimal theme design tokens
+│   └── components.css# Minimal theme component styles
+├── modern/
+│   ├── variables.css # Modern theme design tokens
+│   └── components.css# Modern theme component styles
+└── sharp/
+    ├── variables.css # Sharp theme design tokens
+    └── components.css# Sharp theme component styles
 ```
 
 ### 🎨 Colors (`colors.css`)

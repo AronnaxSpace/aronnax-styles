@@ -6,7 +6,6 @@
   ======================================== */
 
   /* Font Families */
-  --font-family: system-ui, sans-serif;
   --font-family-mono: monospace;
 
   /* Base Font Sizes */
@@ -32,4 +31,6 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: bold;
+
+  /* Note: Theme-specific font families are defined in individual theme files under css/themes/ */
 }

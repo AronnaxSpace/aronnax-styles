@@ -1,0 +1,33 @@
+/* Aronnax Styles: Minimal Theme Variables */
+
+[data-theme="minimal"],
+:root {
+  /* ========================================
+     MINIMAL THEME DESIGN TOKENS
+  ======================================== */
+
+  /* Typography - System fonts, clean and simple */
+  --font-family: system-ui, sans-serif;
+
+  /* Border & Radius - Rounded and friendly */
+  --border-width: 2px;
+  --border-radius: 1rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.75rem;
+  --rounded-full: 9999px;
+
+  /* Spacing - Comfortable and spacious */
+  --padding: 1rem;
+  --padding-sm: 0.5rem;
+  --padding-lg: 2rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 0.75rem;
+  --margin-lg: 1rem;
+
+  /* Shadows - None for clean minimal look */
+  --card-shadow: none;
+  --button-shadow: none;
+  --modal-shadow: none;
+
+  /* Minimal theme uses base semantic colors from modes system */
+}
