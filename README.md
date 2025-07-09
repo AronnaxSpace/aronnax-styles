@@ -8,9 +8,9 @@ A lightweight, modern, customizable CSS component library with a minimalist desi
 
 1. Clone or download this repository
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 ### Development
 

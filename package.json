@@ -1,19 +1,19 @@
 {
   "name": "aronnax-styles",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:css": "postcss css/main.css -o dist/aronnax.css",
-    "dev:js": "esbuild js/main.js --bundle --outfile=dist/aronnax.js",
+    "dev:css": "postcss css/main.css -o dist/aronnax-styles.css",
+    "dev:js": "esbuild js/main.js --bundle --outfile=dist/aronnax-styles.js",
     "dev": "npm run dev:css && npm run dev:js",
-    "build:css": "NODE_ENV=production postcss css/main.css -o dist/aronnax.min.css",
-    "build:js": "esbuild js/main.js --bundle --outfile=dist/aronnax.min.js --minify",
+    "build:css": "NODE_ENV=production postcss css/main.css -o dist/aronnax-styles.min.css",
+    "build:js": "esbuild js/main.js --bundle --outfile=dist/aronnax-styles.min.js --minify",
     "build": "npm run build:css && npm run build:js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "ihortok",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
