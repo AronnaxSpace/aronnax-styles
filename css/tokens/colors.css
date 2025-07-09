@@ -1,0 +1,88 @@
+/* Aronnax Styles: Color Design Tokens */
+
+:root {
+  /* ========================================
+     BASE COLOR PALETTE
+  ======================================== */
+
+  /* Primary Colors - Light Mode (default) */
+  --primary-color: #000;
+  --secondary-color: #e2e8f0;
+  --white: #fff;
+
+  /* Text Colors */
+  --text-color: #111;
+  --text-muted: #444;
+  --text-light: #666;
+
+  /* Background Colors */
+  --bg-color: #f9f9f9;
+  --code-bg: #eee;
+
+  /* Semantic Colors (Button Variants) */
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+
+  /* Border Colors */
+  --border-color: #000;
+
+  /* Overlays */
+  --overlay-light: rgba(0, 0, 0, 0.4);
+  --overlay-dark: rgba(0, 0, 0, 0.6);
+}
+
+/* Dark Mode - Auto (respects system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors - Dark Mode */
+    --primary-color: #fff;
+    --secondary-color: #374151;
+    --white: #111827;
+
+    --text-color: #f9fafb;
+    --text-muted: #d1d5db;
+    --text-light: #9ca3af;
+    --bg-color: #0f172a;
+    --code-bg: #374151;
+
+    --border-color: #fff;
+
+    /* Semantic Colors (Button Variants) - Dark Mode */
+    --success-color: #20c997;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+
+    /* Dark mode overlays */
+    --overlay-light: rgba(255, 255, 255, 0.1);
+    --overlay-dark: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Dark Mode - Manual Toggle (using [data-mode="dark"] on html/body) */
+[data-mode="dark"] {
+  /* Colors - Dark Mode */
+  --primary-color: #fff;
+  --secondary-color: #374151;
+  --white: #111827;
+
+  --text-color: #f9fafb;
+  --text-muted: #d1d5db;
+  --text-light: #9ca3af;
+  --bg-color: #0f172a;
+  --code-bg: #374151;
+
+  --border-color: #fff;
+
+  /* Semantic Colors (Button Variants) - Dark Mode */
+  --success-color: #20c997;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #3498db;
+
+  /* Dark mode overlays */
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-dark: rgba(255, 255, 255, 0.2);
+}

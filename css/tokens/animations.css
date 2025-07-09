@@ -1,0 +1,11 @@
+/* Aronnax Styles: Animation Design Tokens */
+
+:root {
+  /* ========================================
+     ANIMATION & TRANSITIONS
+  ======================================== */
+
+  /* Transition Timing */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}

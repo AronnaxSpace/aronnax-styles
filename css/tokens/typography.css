@@ -1,0 +1,35 @@
+/* Aronnax Styles: Typography Design Tokens */
+
+:root {
+  /* ========================================
+     TYPOGRAPHY SYSTEM
+  ======================================== */
+
+  /* Font Families */
+  --font-family: system-ui, sans-serif;
+  --font-family-mono: monospace;
+
+  /* Base Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.95rem;
+
+  /* Heading Scale */
+  --text-h1: 2rem;
+  --text-h2: 1.75rem;
+  --text-h3: 1.5rem;
+  --text-h4: 1.25rem;
+  --text-h5: 1.125rem;
+  --text-h6: 1rem;
+
+  /* Line Heights */
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+  --line-height-relaxed: 1.6;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: bold;
+}

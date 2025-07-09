@@ -1,0 +1,11 @@
+/* Aronnax Styles: Z-Index Design Tokens */
+
+:root {
+  /* ========================================
+     Z-INDEX SCALE
+  ======================================== */
+
+  /* Z-index layers for proper stacking context */
+  --z-overlay: 999;
+  --z-modal: 1000;
+}

@@ -1,0 +1,43 @@
+/* Aronnax Styles: Spacing Design Tokens */
+
+:root {
+  /* ========================================
+     SPACING SYSTEM
+  ======================================== */
+
+  /* Base Spacing Scale */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  /* Theme-specific Spacing (Minimal theme defaults) */
+  --padding: 1rem;
+  --padding-sm: 0.5rem;
+  --padding-lg: 2rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 0.75rem;
+  --margin-lg: 1rem;
+
+  /* Border Radius */
+  --border-radius: 1rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.75rem;
+  --rounded-full: 9999px;
+
+  /* Border Width */
+  --border-width: 2px;
+
+  /* Component Sizes */
+  --sidebar-width: 250px;
+  --modal-max-width: 500px;
+  --container-max-width: 90%;
+
+  /* Grid Gaps */
+  --gap-sm: 0.5rem;
+  --gap-base: 1rem;
+  --gap-lg: 2rem;
+}
