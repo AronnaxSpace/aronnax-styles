@@ -5,9 +5,7 @@
      LIGHT MODE COLOR PALETTE
   ======================================== */
 
-  /* Primary Colors */
-  --primary-color: #000;
-  --secondary-color: #e2e8f0;
+  /* Base Colors */
   --white: #fff;
 
   /* Text Colors */
@@ -19,7 +17,9 @@
   --bg-color: #f9f9f9;
   --code-bg: #eee;
 
-  /* Semantic Colors (Button Variants) */
+  /* Semantic Colors */
+  --primary-color: #000;
+  --secondary-color: #e2e8f0;
   --success-color: #28a745;
   --danger-color: #dc3545;
   --warning-color: #ffc107;

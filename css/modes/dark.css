@@ -7,9 +7,7 @@
        DARK MODE COLOR PALETTE (System Preference)
     ======================================== */
 
-    /* Primary Colors */
-    --primary-color: #fff;
-    --secondary-color: #374151;
+    /* Base Colors */
     --white: #111827;
 
     /* Text Colors */
@@ -21,7 +19,9 @@
     --bg-color: #0f172a;
     --code-bg: #374151;
 
-    /* Semantic Colors (Button Variants) */
+    /* Semantic Colors */
+    --primary-color: #fff;
+    --secondary-color: #374151;
     --success-color: #20c997;
     --danger-color: #e74c3c;
     --warning-color: #f39c12;
@@ -42,9 +42,7 @@
      DARK MODE COLOR PALETTE (Manual Toggle)
   ======================================== */
 
-  /* Primary Colors */
-  --primary-color: #fff;
-  --secondary-color: #374151;
+  /* Base Colors */
   --white: #111827;
 
   /* Text Colors */
@@ -56,7 +54,9 @@
   --bg-color: #0f172a;
   --code-bg: #374151;
 
-  /* Semantic Colors (Button Variants) */
+  /* Semantic Colors */
+  --primary-color: #fff;
+  --secondary-color: #374151;
   --success-color: #20c997;
   --danger-color: #e74c3c;
   --warning-color: #f39c12;
