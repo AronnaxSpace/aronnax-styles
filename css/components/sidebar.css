@@ -15,7 +15,7 @@
   padding: var(--padding-lg) var(--padding);
   transform: translateX(-100%);
   transition: transform var(--transition-normal);
-  z-index: var(--z-modal);
+  z-index: var(--z-modal-content);
 }
 
 /* When toggle is checked, show the sidebar */
@@ -31,7 +31,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-normal);
-  z-index: var(--z-overlay);
+  z-index: var(--z-modal-overlay);
 }
 
 .sidebar-toggle:checked + .sidebar + .sidebar-overlay {

@@ -57,7 +57,7 @@ p {
 
 /* Links */
 a {
-  color: var(--primary-color);
+  color: var(--link-color);
   text-decoration: underline;
 }
 a:hover {

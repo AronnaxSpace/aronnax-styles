@@ -17,7 +17,7 @@
   min-width: 120px;
 }
 
-.mode-toggle .toggle-text {
+.mode-toggle .mode-toggle-text {
   margin-left: var(--margin-sm);
 }
 

@@ -1,16 +1,11 @@
 /* Aronnax Styles: All Themes */
 
-/* Import theme variables first, then component overrides */
-@import './minimal/variables.css';
-@import './modern/variables.css';
-@import './sharp/variables.css';
+/* Import theme tokens first, then component overrides */
+@import './minimal/tokens.css';
+@import './modern/tokens.css';
+@import './sharp/tokens.css';
 
 /* Import theme-specific component styles */
 @import './minimal/components.css';
 @import './modern/components.css';
 @import './sharp/components.css';
-
-/* Import theme-managed dark mode styles */
-@import './minimal/dark.css';
-@import './modern/dark.css';
-@import './sharp/dark.css';

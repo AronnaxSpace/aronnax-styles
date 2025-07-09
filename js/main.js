@@ -10,10 +10,10 @@ function toggleMode() {
   localStorage.setItem('mode', newMode);
   
   // Update toggle button text if it exists
-  const toggleBtn = document.querySelector('.mode-toggle');
+  const toggleBtn = document.querySelector('#mode-toggle');
   if (toggleBtn) {
     const icon = toggleBtn.querySelector('i');
-    const text = toggleBtn.querySelector('.toggle-text');
+    const text = toggleBtn.querySelector('#mode-toggle-text');
     
     if (newMode === 'dark') {
       if (icon) icon.className = 'fas fa-sun';
@@ -38,10 +38,10 @@ function initializeMode() {
   document.documentElement.setAttribute('data-mode', mode);
   
   // Update toggle button if it exists
-  const toggleBtn = document.querySelector('.mode-toggle');
+  const toggleBtn = document.querySelector('#mode-toggle');
   if (toggleBtn) {
     const icon = toggleBtn.querySelector('i');
-    const text = toggleBtn.querySelector('.toggle-text');
+    const text = toggleBtn.querySelector('#mode-toggle-text');
     
     if (mode === 'dark') {
       if (icon) icon.className = 'fas fa-sun';
@@ -74,12 +74,6 @@ function setTheme(themeName) {
   
   document.documentElement.setAttribute('data-theme', themeName);
   localStorage.setItem('theme', themeName);
-  
-  // Update theme selector if it exists
-  const themeSelector = document.querySelector('#theme-selector');
-  if (themeSelector) {
-    themeSelector.value = themeName;
-  }
   
   console.log(`Theme changed to: ${themeName}`);
 }

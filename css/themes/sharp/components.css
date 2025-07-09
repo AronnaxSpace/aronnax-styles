@@ -112,19 +112,6 @@
   border: var(--border-width) solid var(--border-color);
 }
 
-/* Theme selector styling */
-[data-theme="sharp"] .theme-selector {
-  border: var(--border-width) solid var(--border-color);
-  border-radius: 0;
-  background: var(--white);
-  box-shadow: none;
-}
-
-[data-theme="sharp"] .theme-selector:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: -2px;
-}
-
 /* Sharp form validation states */
 [data-theme="sharp"] .form-group.error .form-input,
 [data-theme="sharp"] .form-group.error .form-textarea,

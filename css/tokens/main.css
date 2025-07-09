@@ -3,7 +3,6 @@
 /* Import all design token files in logical order */
 @import './breakpoints.css';
 @import './colors.css';
-@import '../modes/main.css';
 @import './typography.css';
 @import './spacing.css';
 @import './shadows.css';

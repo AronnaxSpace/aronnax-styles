@@ -6,37 +6,43 @@
   <title>Aronnax Styles Demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <!-- <link rel="stylesheet" href="dist/aronnax.min.css"> -->
   </head>
 <body>
 
   <div class="container">
 
-    <!-- Themes Section -->
+    <!-- Themes -->
     <section class="mb-4">
       <h2 class="mb-2">Themes & Modes</h2>
-      <select id="theme-selector" class="form-select mb-4" onchange="setTheme(this.value)">
-        <option value="minimal">Minimal</option>
-        <option value="modern">Modern</option>
-        <option value="sharp">Sharp</option>
-      </select>
       <div class="card">
         <h3>Current Design System</h3>
         <p><strong>Theme:</strong> <span id="current-theme">Minimal</span> | <strong>Mode:</strong> <span id="current-mode">Light</span></p>
         <p>Try switching between different themes using the selector above. Each theme has its own personality:</p>
         <ul style="text-align: left; margin-top: 1rem;">
-          <li><strong>Minimal:</strong> Clean, sharp borders, no shadows - perfect for modern interfaces</li>
-          <li><strong>Modern:</strong> Tech-focused, pronounced shadows, sharp and efficient</li>
-          <li><strong>Sharp:</strong> Ultra-minimal with zero border radius, clean lines, and angular precision ⚡</li>
+          <li>
+            <strong>Minimal:</strong>
+            <span>Clean, sharp borders, no shadows - perfect for modern interfaces</span>
+            <button onclick="setTheme(this.value)" value="minimal" class="btn-link">Try it</button>
+          </li>
+          <li>
+            <strong>Modern:</strong>
+            <span>Tech-focused, pronounced shadows, sharp and efficient</span>
+            <button onclick="setTheme(this.value)" value="modern" class="btn-link">Try it</button>
+          </li>
+          <li>
+            <strong>Sharp:</strong>
+            <span>Ultra-minimal with zero border radius, clean lines, and angular precision ⚡</span>
+            <button onclick="setTheme(this.value)" value="sharp" class="btn-link">Try it</button>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Buttons Section -->
+    <!-- Buttons -->
     <section class="mb-4">
       <h2 class="mb-2">Buttons</h2>
       <div class="flex gap items-center flex-wrap mt-4">
-        <button class="btn btn-primary">
+        <button class="btn">
           <i class="fas fa-arrow-right"></i> Primary
         </button>
         <button class="btn btn-success">
@@ -59,7 +65,30 @@
         </button>
       </div>
       <div class="flex gap items-center flex-wrap mt-4">
-        <button class="btn btn-primary btn-outline">
+        <button class="btn btn-sm">
+          <i class="fas fa-arrow-right"></i> Primary
+        </button>
+        <button class="btn btn-sm btn-success">
+          <i class="fas fa-check"></i> Success
+        </button>
+        <button class="btn btn-sm btn-danger">
+          <i class="fas fa-times"></i> Danger
+        </button>
+        <button class="btn btn-sm btn-warning">
+          <i class="fas fa-exclamation-triangle"></i> Warning
+        </button>
+        <button class="btn btn-sm btn-info">
+          <i class="fas fa-info-circle"></i> Info
+        </button>
+        <button class="btn btn-sm btn-secondary">
+          <i class="fas fa-cog"></i> Secondary
+        </button>
+        <button class="btn btn-sm" disabled>
+          <i class="fas fa-ban"></i> Disabled
+        </button>
+      </div>
+      <div class="flex gap items-center flex-wrap mt-4">
+        <button class="btn btn-outline">
           <i class="fas fa-arrow-right"></i> Primary Outline
         </button>
         <button class="btn btn-success btn-outline">
@@ -85,16 +114,16 @@
         <label for="sidebar-toggle" class="btn">
           <i class="fas fa-bars"></i> Open Sidebar
         </label>
-        <button class="btn mode-toggle" onclick="toggleMode()">
-          <i class="fas fa-moon"></i> <span class="toggle-text">Dark Mode</span>
+        <button id="mode-toggle" class="btn" onclick="toggleMode()">
+          <i class="fas fa-moon"></i> <span id="mode-toggle-text">Dark Mode</span>
         </button>
       </div>
     </section>
 
-    <!-- Forms Section -->
+    <!-- Forms -->
     <section class="mb-4">
       <h2 class="mb-2">Forms</h2>
-      
+
       <!-- Basic Form -->
       <div class="card mb-4">
         <h3 class="mb-3">Contact Form</h3>
@@ -109,18 +138,18 @@
               <input type="text" id="last-name" class="form-input" placeholder="Enter your last name" required>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label required" for="email">Email Address</label>
             <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
             <div class="form-help">We'll never share your email with anyone else.</div>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label" for="phone">Phone Number</label>
             <input type="tel" id="phone" class="form-input" placeholder="(555) 123-4567">
           </div>
-          
+
           <div class="form-group">
             <label class="form-label" for="subject">Subject</label>
             <select id="subject" class="form-select">
@@ -131,19 +160,19 @@
               <option value="feedback">Feedback</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label required" for="message">Message</label>
             <textarea id="message" class="form-textarea" placeholder="Tell us how we can help you..." rows="4" required></textarea>
           </div>
-          
+
           <div class="form-group">
             <label class="form-checkbox">
               <input type="checkbox" required>
               <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
             </label>
           </div>
-          
+
           <div class="form-actions">
             <button type="submit" class="btn btn-success">
               <i class="fas fa-paper-plane"></i> Send Message
@@ -165,21 +194,21 @@
               <input type="text" id="success-input" class="form-input" value="Valid input">
               <div class="form-help">This field is valid!</div>
             </div>
-            
+
             <div class="form-group error">
               <label class="form-label" for="error-input">Error State</label>
               <input type="text" id="error-input" class="form-input" value="Invalid input">
               <div class="form-help">This field has an error.</div>
             </div>
           </div>
-          
+
           <div class="form-col-2">
             <div class="form-group warning">
               <label class="form-label" for="warning-input">Warning State</label>
               <input type="text" id="warning-input" class="form-input" value="Needs attention">
               <div class="form-help">Please review this field.</div>
             </div>
-            
+
             <div class="form-group">
               <label class="form-label" for="disabled-input">Disabled State</label>
               <input type="text" id="disabled-input" class="form-input" value="Disabled field" disabled>
@@ -197,18 +226,18 @@
               <label class="form-label" for="small-input">Small Input</label>
               <input type="text" id="small-input" class="form-input form-input-sm" placeholder="Small size">
             </div>
-            
+
             <div class="form-group">
               <label class="form-label" for="normal-input">Normal Input</label>
               <input type="text" id="normal-input" class="form-input" placeholder="Normal size">
             </div>
-            
+
             <div class="form-group">
               <label class="form-label" for="large-input">Large Input</label>
               <input type="text" id="large-input" class="form-input form-input-lg" placeholder="Large size">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label" for="file-upload">File Upload</label>
             <div class="form-file">
@@ -220,7 +249,7 @@
             </div>
             <div class="form-help">Select one or more files to upload.</div>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label">Preferences</label>
             <div style="display: flex; flex-direction: column; gap: 0.5rem;">
@@ -238,7 +267,7 @@
               </label>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="form-label">Account Type</label>
             <div style="display: flex; flex-direction: column; gap: 0.5rem;">
@@ -288,23 +317,21 @@
       </div>
     </section>
 
-    <!-- Modal Toggle Checkbox -->
+    <!-- Modal -->
     <input type="checkbox" id="modal-toggle" class="modal-toggle">
 
-    <!-- Modal -->
     <div class="modal">
+      <label for="modal-toggle" class="modal-overlay"></label>
       <div class="modal-content">
         <h3>Pure CSS Modal</h3>
         <p>This modal opens and closes without any JavaScript.</p>
-        <!-- Close button (label toggles checkbox off) -->
-        <label for="modal-toggle" class="close-btn">Close</label>
+        <label for="modal-toggle" class="btn">Close</label>
       </div>
     </div>
 
-    <!-- Sidebar Toggle -->
+    <!-- Sidebar -->
     <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
 
-    <!-- Sidebar -->
     <div class="sidebar">
       <h3>Sidebar Menu</h3>
       <ul>
@@ -313,16 +340,13 @@
         <li><a href="#">Settings</a></li>
       </ul>
 
-      <!-- Close Sidebar -->
       <label for="sidebar-toggle" class="sidebar-close">Close</label>
     </div>
 
-    <!-- Overlay -->
-    <div class="sidebar-overlay"></div>
+    <label for="sidebar-toggle" class="sidebar-overlay"></label>
   </div>
 
   <script src="js/main.js"></script>
-  <!-- <script src="dist/aronnax.min.js"></script> -->
 
 </body>
 </html>

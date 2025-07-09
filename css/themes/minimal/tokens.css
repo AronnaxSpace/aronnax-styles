@@ -18,6 +18,7 @@
 
   /* Spacing - Comfortable and spacious */
   --padding: 1rem;
+  --padding-xs: 0.25rem;
   --padding-sm: 0.5rem;
   --padding-lg: 2rem;
   --margin-sm: 0.5rem;

@@ -16,16 +16,32 @@
   transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
+.btn-sm {
+  padding: var(--padding-xs) var(--space-4);
+  font-size: var(--font-size-xs);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn:hover {
   background-color: var(--white);
   color: var(--primary-color);
+}
+
+.btn:disabled:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: none;
 }
 
 .btn i {
   margin-right: var(--margin-sm);
 }
 
-/* Outline Button Variant */
+/* Outline Button */
 .btn-outline {
   background-color: transparent;
   color: var(--primary-color);
@@ -36,16 +52,6 @@
   background-color: var(--primary-color);
   color: var(--white);
 }
-
-/* Disabled Button */
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* ========================================
-   BUTTON VARIANTS (Theme-dependent)
-======================================== */
 
 /* Success Button */
 .btn-success {
@@ -160,4 +166,13 @@
 .btn-secondary.btn-outline:hover {
   background-color: var(--secondary-color);
   color: var(--white);
+}
+
+/* Button Link */
+.btn-link {
+  background-color: transparent;
+  color: var(--link-color);
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
 }
