@@ -1,0 +1,71 @@
+/* Aronnax Styles: Dark Mode Color Tokens */
+
+/* Dark Mode - Auto (respects system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ========================================
+       DARK MODE COLOR PALETTE (System Preference)
+    ======================================== */
+
+    /* Primary Colors */
+    --primary-color: #fff;
+    --secondary-color: #374151;
+    --white: #111827;
+
+    /* Text Colors */
+    --text-color: #f9fafb;
+    --text-muted: #d1d5db;
+    --text-light: #9ca3af;
+
+    /* Background Colors */
+    --bg-color: #0f172a;
+    --code-bg: #374151;
+
+    /* Semantic Colors (Button Variants) */
+    --success-color: #20c997;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+
+    /* Border Colors */
+    --border-color: #fff;
+
+    /* Overlays */
+    --overlay-light: rgba(255, 255, 255, 0.1);
+    --overlay-dark: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Dark Mode - Manual Toggle (using [data-mode="dark"] on html/body) */
+[data-mode="dark"] {
+  /* ========================================
+     DARK MODE COLOR PALETTE (Manual Toggle)
+  ======================================== */
+
+  /* Primary Colors */
+  --primary-color: #fff;
+  --secondary-color: #374151;
+  --white: #111827;
+
+  /* Text Colors */
+  --text-color: #f9fafb;
+  --text-muted: #d1d5db;
+  --text-light: #9ca3af;
+
+  /* Background Colors */
+  --bg-color: #0f172a;
+  --code-bg: #374151;
+
+  /* Semantic Colors (Button Variants) */
+  --success-color: #20c997;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #3498db;
+
+  /* Border Colors */
+  --border-color: #fff;
+
+  /* Overlays */
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-dark: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,34 @@
+/* Aronnax Styles: Light Mode Color Tokens */
+
+:root {
+  /* ========================================
+     LIGHT MODE COLOR PALETTE
+  ======================================== */
+
+  /* Primary Colors */
+  --primary-color: #000;
+  --secondary-color: #e2e8f0;
+  --white: #fff;
+
+  /* Text Colors */
+  --text-color: #111;
+  --text-muted: #444;
+  --text-light: #666;
+
+  /* Background Colors */
+  --bg-color: #f9f9f9;
+  --code-bg: #eee;
+
+  /* Semantic Colors (Button Variants) */
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+
+  /* Border Colors */
+  --border-color: #000;
+
+  /* Overlays */
+  --overlay-light: rgba(0, 0, 0, 0.4);
+  --overlay-dark: rgba(0, 0, 0, 0.6);
+}

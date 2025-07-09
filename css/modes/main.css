@@ -1,0 +1,5 @@
+/* Aronnax Styles: Mode System Main Entry Point */
+
+/* Import light mode (default) and dark mode overrides */
+@import './light.css';
+@import './dark.css';

@@ -12,22 +12,26 @@ The design tokens have been organized into logical files within the `css/tokens/
 css/tokens/
 ├── main.css          # Main entry point - imports all token files
 ├── breakpoints.css   # Responsive breakpoint references
-├── colors.css        # Color palette and semantic colors
+├── colors.css        # Color system foundation
 ├── typography.css    # Font families, sizes, weights, line heights
 ├── spacing.css       # Spacing scale, padding, margins, border radius
 ├── shadows.css       # Shadow definitions and theme-specific usage
 ├── animations.css    # Transition and animation timing
 └── z-index.css       # Z-index scale for stacking context
+
+css/modes/
+├── main.css          # Mode system entry point
+├── light.css         # Light mode color definitions
+└── dark.css          # Dark mode color definitions
 ```
 
 ### 🎨 Colors (`colors.css`)
-- **Base palette**: Primary, secondary, white
-- **Text colors**: Main text, muted, light variants
-- **Background colors**: Main background, code background
-- **Semantic colors**: Success, danger, warning, info
-- **Border colors**: Border definitions
-- **Overlays**: Light and dark overlay colors
-- **Mode support**: Automatic dark mode and manual toggle
+- **Base system**: Foundation for the color system
+- **Mode separation**: Actual colors defined in `css/modes/`
+  - Light mode: `css/modes/light.css`
+  - Dark mode: `css/modes/dark.css`
+- **Automatic switching**: System preference support
+- **Manual toggle**: JavaScript-controlled mode switching
 
 ### 🔤 Typography (`typography.css`)
 - **Font families**: System fonts and monospace
