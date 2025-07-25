@@ -46,9 +46,10 @@ function initializeMode() {
   
   /** Check for saved mode preference or default to system preference */
   const savedMode = localStorage.getItem('mode');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  const mode = savedMode || (systemPrefersDark ? 'dark' : 'light');
+  // const mode = savedMode || (systemPrefersDark ? 'dark' : 'light');
+  const mode = savedMode || 'light';
   document.documentElement.setAttribute('data-mode', mode);
   
   /** Update toggle button if it exists */
@@ -166,7 +167,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
  */
 document.addEventListener('DOMContentLoaded', () => {
   initializeMode();
-  initializeTheme();
   updateCurrentDisplay();
 });
 

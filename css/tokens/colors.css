@@ -36,35 +36,7 @@
  * Dark Mode - Auto (respects system preference)
  */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /** Base Colors */
-    --white: #111827;
-    --link-color: #3b82f6;
-
-    /** Text Colors */
-    --text-color: #f9fafb;
-    --text-muted: #d1d5db;
-    --text-light: #9ca3af;
-
-    /** Background Colors */
-    --bg-color: #0f172a;
-        --code-bg: #1f2937;
-
-    /** Semantic Colors */
-    --primary-color: #fff;
-    --secondary-color: #374151;
-    --success-color: #20c997;
-    --danger-color: #e74c3c;
-    --warning-color: #f39c12;
-    --info-color: #3498db;
-
-    /** Border Colors */
-    --border-color: #fff;
-
-    /** Overlays */
-    --overlay-light: rgba(255, 255, 255, 0.1);
-    --overlay-dark: rgba(255, 255, 255, 0.2);
-  }
+  /** To be implemented */
 }
 
 /**
