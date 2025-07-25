@@ -1,0 +1,42 @@
+/**
+ * Aronnax Styles: Terminal Theme Variables
+ * Minimalistic hacker-style terminal aesthetic
+ */
+
+[data-theme="terminal"] {
+  /** Typography - Monospace terminal fonts */
+  --font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+
+  /** Border & Radius - Sharp terminal edges */
+  --border-radius: 0;
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --rounded-full: 0;
+
+  /** Core terminal colors */
+  --terminal-green: #00ff00;
+  --terminal-cyan: #00ffff;
+
+  /** Semantic colors - simplified */
+  --success-color: #00ff00;
+  --danger-color: #ff0040;
+  --warning-color: #ffff00;
+  --info-color: #00ffff;
+
+  /** Background and text */
+  --bg-color: #0a0a0a;
+  --code-bg: #111111;
+  --text-color: #00ff00;
+  --text-muted: #00cc00;
+
+  /** Border colors */
+  --border-color: #00ff00;
+  --primary-color: #00ff00;
+}
+
+/** Terminal dark mode - enhanced glow */
+[data-theme="terminal"][data-mode="dark"] {
+  --bg-color: #000000;
+  --text-color: #00ff00;
+  --text-muted: #00ff88;
+}

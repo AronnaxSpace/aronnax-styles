@@ -74,7 +74,7 @@ function initializeMode() {
 }
 
 /** Available themes */
-const availableThemes = ['minimal', 'modern', 'sharp'];
+const availableThemes = ['minimal', 'modern', 'sharp', 'terminal'];
 
 /**
  * Set specific theme (internal implementation)

@@ -1,0 +1,108 @@
+/**
+ * Aronnax Styles: Terminal Theme Component Styles
+ * Minimalistic hacker-style terminal aesthetic
+ */
+
+/** Core terminal styling */
+[data-theme="terminal"] .card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--terminal-green);
+}
+
+[data-theme="terminal"] .card:hover {
+  border-color: var(--terminal-cyan);
+}
+
+/** Terminal buttons */
+[data-theme="terminal"] .btn {
+  background-color: transparent;
+  border: 1px solid var(--terminal-green);
+  color: var(--terminal-green);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
+
+[data-theme="terminal"] .btn::before {
+  content: '> ';
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+[data-theme="terminal"] .btn:hover::before {
+  opacity: 1;
+}
+
+[data-theme="terminal"] .btn:hover {
+  background-color: var(--terminal-green);
+  color: var(--bg-color);
+}
+
+/** Button variants - minimal */
+[data-theme="terminal"] .btn-success {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+[data-theme="terminal"] .btn-success:hover {
+  background-color: var(--success-color);
+  color: var(--bg-color);
+}
+
+[data-theme="terminal"] .btn-danger {
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+[data-theme="terminal"] .btn-danger:hover {
+  background-color: var(--danger-color);
+  color: var(--bg-color);
+}
+
+/** Forms */
+[data-theme="terminal"] .form-input,
+[data-theme="terminal"] .form-textarea,
+[data-theme="terminal"] .form-select {
+  background-color: var(--bg-color);
+  border: 1px solid var(--terminal-green);
+  color: var(--terminal-green);
+  font-family: var(--font-family);
+}
+
+[data-theme="terminal"] .form-input:focus,
+[data-theme="terminal"] .form-textarea:focus,
+[data-theme="terminal"] .form-select:focus {
+  border-color: var(--terminal-cyan);
+  outline: none;
+}
+
+/** Typography */
+[data-theme="terminal"] h1,
+[data-theme="terminal"] h2,
+[data-theme="terminal"] h3,
+[data-theme="terminal"] h4,
+[data-theme="terminal"] h5,
+[data-theme="terminal"] h6 {
+  font-family: var(--font-family);
+  color: var(--terminal-green);
+  text-transform: uppercase;
+}
+
+[data-theme="terminal"] code,
+[data-theme="terminal"] pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--terminal-green);
+  color: var(--terminal-green);
+  font-family: var(--font-family);
+}
+
+/** Terminal cursor animation */
+[data-theme="terminal"] .terminal-cursor::after {
+  content: '_';
+  animation: terminal-blink 1s infinite;
+  color: var(--terminal-green);
+}
+
+@keyframes terminal-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

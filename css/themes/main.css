@@ -4,8 +4,10 @@
 @import './minimal/tokens.css';
 @import './modern/tokens.css';
 @import './sharp/tokens.css';
+@import './terminal/tokens.css';
 
 /* Import theme-specific component styles */
 @import './minimal/components.css';
 @import './modern/components.css';
 @import './sharp/components.css';
+@import './terminal/components.css';

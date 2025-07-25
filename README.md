@@ -96,6 +96,7 @@ Aronnax Styles includes multiple themes, each with its own design personality:
 - **Minimal** (default) - Clean and simple with basic styling
 - **Modern** - Tech-focused, pronounced shadows, sharp and efficient
 - **Sharp** - Ultra-minimal with zero border radius, clean lines, and angular precision
+- **Terminal** - Hacker-style minimalistic terminal aesthetic with monospace fonts and matrix-green glow
 
 ### Using Themes
 
