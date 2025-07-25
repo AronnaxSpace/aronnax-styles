@@ -115,8 +115,10 @@ function getAvailableThemes() {
  * Initialize theme on page load
  */
 function initializeTheme() {
-  const savedTheme = localStorage.getItem('theme') || 'minimal';
-  _setTheme(savedTheme); // Use internal version to avoid triggering display update during init
+  if (!document.documentElement.hasAttribute('data-theme')) {
+    const savedTheme = localStorage.getItem('theme') || 'minimal';
+    _setTheme(savedTheme); // Use internal version to avoid triggering display update during init
+  }
 }
 
 /**
@@ -167,6 +169,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
  */
 document.addEventListener('DOMContentLoaded', () => {
   initializeMode();
+  initializeTheme();
   updateCurrentDisplay();
 });
 
