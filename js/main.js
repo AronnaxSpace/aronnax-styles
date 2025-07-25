@@ -4,9 +4,9 @@
 console.log("Aronnax Styles loaded");
 
 /**
- * Mode Toggle Function
+ * Mode Toggle Function (internal implementation)
  */
-function toggleMode() {
+function _toggleMode() {
   const currentMode = document.documentElement.getAttribute('data-mode');
   const newMode = currentMode === 'dark' ? 'light' : 'dark';
   
@@ -27,6 +27,14 @@ function toggleMode() {
       if (text) text.textContent = 'Dark Mode';
     }
   }
+}
+
+/**
+ * Mode Toggle Function (public API with display update)
+ */
+function toggleMode() {
+  _toggleMode();
+  updateCurrentDisplay();
 }
 
 /**
@@ -68,9 +76,9 @@ function initializeMode() {
 const availableThemes = ['minimal', 'modern', 'sharp'];
 
 /**
- * Set specific theme
+ * Set specific theme (internal implementation)
  */
-function setTheme(themeName) {
+function _setTheme(themeName) {
   if (!availableThemes.includes(themeName)) {
     console.warn(`Theme "${themeName}" not available. Available themes:`, availableThemes);
     return;
@@ -78,8 +86,14 @@ function setTheme(themeName) {
   
   document.documentElement.setAttribute('data-theme', themeName);
   localStorage.setItem('theme', themeName);
-  
-  console.log(`Theme changed to: ${themeName}`);
+}
+
+/**
+ * Set specific theme (public API with display update)
+ */
+function setTheme(themeName) {
+  _setTheme(themeName);
+  updateCurrentDisplay();
 }
 
 /**
@@ -101,14 +115,14 @@ function getAvailableThemes() {
  */
 function initializeTheme() {
   const savedTheme = localStorage.getItem('theme') || 'minimal';
-  setTheme(savedTheme);
+  _setTheme(savedTheme); // Use internal version to avoid triggering display update during init
 }
 
 /**
  * Combined appearance function (theme + mode)
  */
 function setAppearance(theme, mode) {
-  setTheme(theme);
+  _setTheme(theme);
   
   const currentMode = document.documentElement.getAttribute('data-mode');
   if (currentMode !== mode) {
@@ -116,7 +130,7 @@ function setAppearance(theme, mode) {
     localStorage.setItem('mode', mode);
   }
   
-  console.log(`Appearance set to: ${theme} theme, ${mode} mode`);
+  updateCurrentDisplay();
 }
 
 /**
@@ -139,24 +153,6 @@ function updateCurrentDisplay() {
 }
 
 /**
- * Override setTheme to update display
- */
-const originalSetTheme = setTheme;
-setTheme = function(themeName) {
-  originalSetTheme(themeName);
-  updateCurrentDisplay();
-}
-
-/**
- * Override toggleMode to update display
- */
-const originalToggleMode = toggleMode;
-toggleMode = function() {
-  originalToggleMode();
-  updateCurrentDisplay();
-}
-
-/**
  * Listen for system mode changes
  */
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
@@ -175,10 +171,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Make functions globally available
+ * Make functions globally available for HTML onclick handlers
  */
-window.toggleMode = toggleMode;
-window.setTheme = setTheme;
-window.getCurrentTheme = getCurrentTheme;
-window.getAvailableThemes = getAvailableThemes;
-window.setAppearance = setAppearance;
+if (typeof window !== 'undefined') {
+  window.toggleMode = toggleMode;
+  window.setTheme = setTheme;
+  window.getCurrentTheme = getCurrentTheme;
+  window.getAvailableThemes = getAvailableThemes;
+  window.setAppearance = setAppearance;
+}
+
+/**
+ * Export functions for module usage
+ * Organized by category for better maintainability
+ */
+export {
+  // Mode functions
+  toggleMode,
+  initializeMode,
+  
+  // Theme functions  
+  setTheme,
+  getCurrentTheme,
+  getAvailableThemes,
+  initializeTheme,
+  
+  // Combined functions
+  setAppearance,
+  updateCurrentDisplay
+};
