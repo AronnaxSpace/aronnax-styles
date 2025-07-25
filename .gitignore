@@ -1,3 +1,19 @@
-node_modules
+node_modules/
 dist/aronnax-styles.css
 dist/aronnax-styles.js
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

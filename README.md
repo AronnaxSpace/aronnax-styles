@@ -1,15 +1,70 @@
 # Aronnax Styles
 
-A lightweight, modern, customizable CSS component library with a minimalist design philosophy.
+A lightweight, modern, customizable CSS component library with multiple themes and dark/light mode support.
 
 ## 🚀 Quick Start
 
 ### Installation
 
-1. Clone or download this repository
-2. Install dependencies:
 ```bash
-npm install
+npm install aronnax-styles
+# or
+yarn add aronnax-styles
+```
+
+### Usage
+
+#### CSS
+
+```html
+<!-- Include the CSS -->
+<link rel="stylesheet" href="node_modules/aronnax-styles/css/main.css">
+
+<!-- Or use the minified version -->
+<link rel="stylesheet" href="node_modules/aronnax-styles/dist/aronnax-styles.min.css">
+```
+
+#### JavaScript (ES6 Modules)
+
+```javascript
+// Import the main API object
+import { Aronnax } from 'aronnax-styles';
+
+// Use structured API (recommended)
+Aronnax.mode.toggle();
+Aronnax.theme.set('modern');
+
+// Or import individual functions
+import { toggleMode, setTheme } from 'aronnax-styles';
+toggleMode();
+setTheme('modern');
+```
+
+#### Rails/Stimulus Integration
+
+```javascript
+// In your Rails Stimulus controller
+import { Controller } from "@hotwired/stimulus";
+import { Aronnax } from 'aronnax-styles';
+
+export default class extends Controller {
+  switch() {
+    Aronnax.mode.toggle();
+  }
+  
+  changeTheme() {
+    Aronnax.theme.set('modern');
+  }
+}
+```
+
+#### HTML (Direct Usage)
+
+```html
+<!-- The bundled version makes functions globally available -->
+<script src="node_modules/aronnax-styles/dist/aronnax-styles.min.js"></script>
+<button onclick="toggleMode()">Toggle Dark Mode</button>
+<button onclick="setTheme('modern')">Modern Theme</button>
 ```
 
 ### Development
@@ -23,31 +78,6 @@ Build for production:
 ```bash
 npm run build
 ```
-
-### Usage
-
-Include the CSS in your HTML:
-
-```html
-<!-- Development -->
-<link rel="stylesheet" href="css/main.css">
-
-<!-- Or use the compiled version -->
-<link rel="stylesheet" href="dist/aronnax.css">
-
-<!-- Production (minified) -->
-<link rel="stylesheet" href="dist/aronnax.min.css">
-```
-
-For icons, include Font Awesome:
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-```
-
-## 🛠️ Build Scripts
-
-- `npm run dev` - Build CSS and JS for development
-- `npm run build` - Build minified CSS and JS for production
 - `npm run dev:css` - Build CSS only (development)
 - `npm run build:css` - Build CSS only (production)
 - `npm run dev:js` - Build JS only (development)

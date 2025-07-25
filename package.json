@@ -1,6 +1,7 @@
 {
   "name": "aronnax-styles",
   "version": "0.1.0",
+  "description": "A lightweight, modern, customizable CSS component library with multiple themes and dark/light mode support",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,10 +12,27 @@
     "build:js": "esbuild js/main.js --bundle --outfile=dist/aronnax-styles.min.js --minify",
     "build": "npm run build:css && npm run build:js"
   },
-  "keywords": [],
+  "keywords": [
+    "css",
+    "components",
+    "ui",
+    "design-system",
+    "themes",
+    "dark-mode",
+    "minimal",
+    "responsive",
+    "styles"
+  ],
   "author": "ihortok",
   "license": "MIT",
-  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AronnaxSpace/aronnax-styles.git"
+  },
+  "homepage": "https://github.com/AronnaxSpace/aronnax-styles#readme",
+  "bugs": {
+    "url": "https://github.com/AronnaxSpace/aronnax-styles/issues"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.7",
