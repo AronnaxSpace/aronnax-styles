@@ -1,4 +1,6 @@
-/* Aronnax Styles: Design Tokens Main Entry Point */
+/**
+ * Aronnax Styles: Design Tokens Main Entry Point
+ */
 
 /* Import all design token files in logical order */
 @import './breakpoints.css';

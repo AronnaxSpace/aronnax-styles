@@ -1,11 +1,6 @@
 /* Aronnax Styles: Z-Index Design Tokens */
 
 :root {
-  /* ========================================
-     Z-INDEX SCALE
-  ======================================== */
-
-  /* Z-index layers for proper stacking context */
   --z-modal-overlay: 999;
   --z-modal-content: 1000;
 }

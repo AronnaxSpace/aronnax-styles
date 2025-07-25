@@ -1,7 +1,11 @@
-// Aronnax Styles - Mode Toggle Functionality (Dark/Light Mode)
+/**
+ * Aronnax Styles - Mode Toggle Functionality (Dark/Light Mode)
+ */
 console.log("Aronnax Styles loaded");
 
-// Mode Toggle Function
+/**
+ * Mode Toggle Function
+ */
 function toggleMode() {
   const currentMode = document.documentElement.getAttribute('data-mode');
   const newMode = currentMode === 'dark' ? 'light' : 'dark';
@@ -9,7 +13,7 @@ function toggleMode() {
   document.documentElement.setAttribute('data-mode', newMode);
   localStorage.setItem('mode', newMode);
   
-  // Update toggle button text if it exists
+  /** Update toggle button text if it exists */
   const toggleBtn = document.querySelector('#mode-toggle');
   if (toggleBtn) {
     const icon = toggleBtn.querySelector('i');
@@ -25,19 +29,21 @@ function toggleMode() {
   }
 }
 
-// Initialize mode on page load
+/**
+ * Initialize mode on page load
+ */
 function initializeMode() {
-  // Prevent transition flash
+  /** Prevent transition flash */
   document.body.classList.add('no-transition');
   
-  // Check for saved mode preference or default to system preference
+  /** Check for saved mode preference or default to system preference */
   const savedMode = localStorage.getItem('mode');
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
   const mode = savedMode || (systemPrefersDark ? 'dark' : 'light');
   document.documentElement.setAttribute('data-mode', mode);
   
-  // Update toggle button if it exists
+  /** Update toggle button if it exists */
   const toggleBtn = document.querySelector('#mode-toggle');
   if (toggleBtn) {
     const icon = toggleBtn.querySelector('i');
@@ -52,20 +58,18 @@ function initializeMode() {
     }
   }
   
-  // Re-enable transitions after a brief delay
+  /** Re-enable transitions after a brief delay */
   setTimeout(() => {
     document.body.classList.remove('no-transition');
   }, 100);
 }
 
-/* ========================================
-   THEME MANAGEMENT FUNCTIONS
-======================================== */
-
-// Available themes
+/** Available themes */
 const availableThemes = ['minimal', 'modern', 'sharp'];
 
-// Set specific theme
+/**
+ * Set specific theme
+ */
 function setTheme(themeName) {
   if (!availableThemes.includes(themeName)) {
     console.warn(`Theme "${themeName}" not available. Available themes:`, availableThemes);
@@ -78,23 +82,31 @@ function setTheme(themeName) {
   console.log(`Theme changed to: ${themeName}`);
 }
 
-// Get current theme
+/**
+ * Get current theme
+ */
 function getCurrentTheme() {
   return document.documentElement.getAttribute('data-theme') || 'minimal';
 }
 
-// Get available themes
+/**
+ * Get available themes
+ */
 function getAvailableThemes() {
   return [...availableThemes];
 }
 
-// Initialize theme on page load
+/**
+ * Initialize theme on page load
+ */
 function initializeTheme() {
   const savedTheme = localStorage.getItem('theme') || 'minimal';
   setTheme(savedTheme);
 }
 
-// Combined appearance function (theme + mode)
+/**
+ * Combined appearance function (theme + mode)
+ */
 function setAppearance(theme, mode) {
   setTheme(theme);
   
@@ -107,7 +119,9 @@ function setAppearance(theme, mode) {
   console.log(`Appearance set to: ${theme} theme, ${mode} mode`);
 }
 
-// Update display of current theme and mode
+/**
+ * Update display of current theme and mode
+ */
 function updateCurrentDisplay() {
   const currentTheme = getCurrentTheme();
   const currentMode = document.documentElement.getAttribute('data-mode') || 'light';
@@ -124,35 +138,45 @@ function updateCurrentDisplay() {
   }
 }
 
-// Override setTheme to update display
+/**
+ * Override setTheme to update display
+ */
 const originalSetTheme = setTheme;
 setTheme = function(themeName) {
   originalSetTheme(themeName);
   updateCurrentDisplay();
 }
 
-// Override toggleMode to update display
+/**
+ * Override toggleMode to update display
+ */
 const originalToggleMode = toggleMode;
 toggleMode = function() {
   originalToggleMode();
   updateCurrentDisplay();
 }
 
-// Listen for system mode changes
+/**
+ * Listen for system mode changes
+ */
 window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
   if (!localStorage.getItem('mode')) {
     document.documentElement.setAttribute('data-mode', e.matches ? 'dark' : 'light');
   }
 });
 
-// Initialize both mode and theme when DOM is loaded
+/**
+ * Initialize both mode and theme when DOM is loaded
+ */
 document.addEventListener('DOMContentLoaded', () => {
   initializeMode();
   initializeTheme();
   updateCurrentDisplay();
 });
 
-// Make functions globally available
+/**
+ * Make functions globally available
+ */
 window.toggleMode = toggleMode;
 window.setTheme = setTheme;
 window.getCurrentTheme = getCurrentTheme;

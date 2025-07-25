@@ -1,24 +1,22 @@
-/* Aronnax Styles: Base Color Design Tokens */
+/**
+ * Aronnax Styles: Base Color Design Tokens
+ */
 
 :root {
-  /* ========================================
-     LIGHT MODE COLOR PALETTE
-  ======================================== */
-
-  /* Base Colors */
+  /** Base Colors */
   --white: #fff;
   --link-color: #007bff;
 
-  /* Text Colors */
+  /** Text Colors */
   --text-color: #111;
   --text-muted: #444;
   --text-light: #666;
 
-  /* Background Colors */
+  /** Background Colors */
   --bg-color: #f9f9f9;
   --code-bg: #eee;
 
-  /* Semantic Colors */
+  /** Semantic Colors */
   --primary-color: #000;
   --secondary-color: #666;
   --success-color: #28a745;
@@ -26,35 +24,33 @@
   --warning-color: #ffc107;
   --info-color: #17a2b8;
 
-  /* Border Colors */
+  /** Border Colors */
   --border-color: #000;
 
-  /* Overlays */
+  /** Overlays */
   --overlay-light: rgba(0, 0, 0, 0.4);
   --overlay-dark: rgba(0, 0, 0, 0.6);
 }
 
-/* Dark Mode - Auto (respects system preference) */
+/**
+ * Dark Mode - Auto (respects system preference)
+ */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* ========================================
-       DARK MODE COLOR PALETTE (System Preference)
-    ======================================== */
-
-    /* Base Colors */
+    /** Base Colors */
     --white: #111827;
     --link-color: #3b82f6;
 
-    /* Text Colors */
+    /** Text Colors */
     --text-color: #f9fafb;
     --text-muted: #d1d5db;
     --text-light: #9ca3af;
 
-    /* Background Colors */
+    /** Background Colors */
     --bg-color: #0f172a;
-    --code-bg: #374151;
+        --code-bg: #1f2937;
 
-    /* Semantic Colors */
+    /** Semantic Colors */
     --primary-color: #fff;
     --secondary-color: #374151;
     --success-color: #20c997;
@@ -62,35 +58,33 @@
     --warning-color: #f39c12;
     --info-color: #3498db;
 
-    /* Border Colors */
+    /** Border Colors */
     --border-color: #fff;
 
-    /* Overlays */
+    /** Overlays */
     --overlay-light: rgba(255, 255, 255, 0.1);
     --overlay-dark: rgba(255, 255, 255, 0.2);
   }
 }
 
-/* Dark Mode - Manual Toggle (using [data-mode="dark"] on html/body) */
+/**
+ * Dark Mode - Manual Toggle (using [data-mode="dark"] on html/body)
+ */
 [data-mode="dark"] {
-  /* ========================================
-     DARK MODE COLOR PALETTE (Manual Toggle)
-  ======================================== */
-
-  /* Base Colors */
+  /** Base Colors */
   --white: #111827;
   --link-color: #3b82f6;
 
-  /* Text Colors */
+  /** Text Colors */
   --text-color: #f9fafb;
   --text-muted: #d1d5db;
   --text-light: #9ca3af;
 
-  /* Background Colors */
+  /** Background Colors */
   --bg-color: #0f172a;
   --code-bg: #374151;
 
-  /* Semantic Colors */
+  /** Semantic Colors */
   --primary-color: #fff;
   --secondary-color: #374151;
   --success-color: #20c997;
@@ -98,10 +92,10 @@
   --warning-color: #f39c12;
   --info-color: #3498db;
 
-  /* Border Colors */
+  /** Border Colors */
   --border-color: #fff;
 
-  /* Overlays */
+  /** Overlays */
   --overlay-light: rgba(255, 255, 255, 0.1);
   --overlay-dark: rgba(255, 255, 255, 0.2);
 }

@@ -1,10 +1,6 @@
 /* Aronnax Styles: Modern Theme Variables */
 
 [data-theme="modern"] {
-  /* ========================================
-     MODERN THEME DESIGN TOKENS
-  ======================================== */
-
   /* Typography - Clean and tech-focused */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -38,10 +34,6 @@
 
 /* Modern theme specific dark mode with tech-focused aesthetics */
 [data-theme="modern"][data-mode="dark"] {
-  /* ========================================
-     MODERN THEME DARK MODE COLORS
-  ======================================== */
-
   /* Use theme accent color as primary in dark mode */
   --primary-color: #00d084;
   --secondary-color: #1f2937;

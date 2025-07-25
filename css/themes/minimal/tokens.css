@@ -1,12 +1,10 @@
-/* Aronnax Styles: Minimal Theme Variables */
+/**
+ * Aronnax Styles: Minimal Theme Variables
+ */
 
 [data-theme="minimal"],
 :root {
-  /* ========================================
-     MINIMAL THEME DESIGN TOKENS
-  ======================================== */
-
-  /* Typography - System fonts, clean and simple */
+  /** Typography - System fonts, clean and simple */
   --font-family: system-ui, sans-serif;
 
   /* Border & Radius - Rounded and friendly */

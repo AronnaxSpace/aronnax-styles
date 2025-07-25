@@ -26,10 +26,6 @@
   transform: translateY(-1px);
 }
 
-/* ========================================
-   MODERN FORM STYLING
-======================================== */
-
 /* Modern form styling with tech-focused aesthetics */
 [data-theme="modern"] .form-input,
 [data-theme="modern"] .form-textarea,

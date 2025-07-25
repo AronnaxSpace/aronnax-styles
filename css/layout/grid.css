@@ -1,4 +1,8 @@
-/* Grid */
+/**
+ * Aronnax Styles: Grid Layout
+ */
+
+/** Grid */
 .grid {
   display: grid;
 }

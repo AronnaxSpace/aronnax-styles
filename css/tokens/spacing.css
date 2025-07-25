@@ -1,10 +1,8 @@
-/* Aronnax Styles: Spacing Design Tokens */
+/**
+ * Aronnax Styles: Spacing Design Tokens
+ */
 
 :root {
-  /* ========================================
-     SPACING SYSTEM
-  ======================================== */
-
   /* Base Spacing Scale */
   --space-0: 0;
   --space-1: 0.25rem;

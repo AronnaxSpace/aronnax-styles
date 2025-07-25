@@ -1,10 +1,6 @@
 /* Aronnax Styles: Sharp Theme Variables */
 
 [data-theme="sharp"] {
-  /* ========================================
-     SHARP THEME DESIGN TOKENS
-  ======================================== */
-
   /* Typography - Clean and minimal */
   --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -38,10 +34,6 @@
 
 /* Sharp theme specific dark mode with ultra-minimal, high-contrast aesthetics */
 [data-theme="sharp"][data-mode="dark"] {
-  /* ========================================
-     SHARP THEME DARK MODE COLORS
-  ======================================== */
-
   /* High contrast backgrounds - pure blacks and whites */
   --bg-color: #000000;        /* Pure black background */
   --white: #1a1a1a;          /* Card/surface color - very dark gray */
