@@ -1,0 +1,14 @@
+//- Cards Section
+section.mb-4
+  h2.mb-2 Cards
+  .grid(class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap")
+    each card in cards
+      .card(class=card.class)
+        if card.image
+          img(src=card.image alt=card.imageAlt)
+        h3= card.title
+        if card.meta
+          .event-meta= card.meta
+        p= card.description
+        if card.price
+          .price= card.price

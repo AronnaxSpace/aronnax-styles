@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Aronnax Styles Demo
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
+    link(rel="stylesheet" href="dist/aronnax-styles.css")
+
+  body
+    .container
+      include sections/buttons
+      include sections/forms
+      include sections/cards
+
+      //- Modal
+      input(type="checkbox" id="modal-toggle" class="modal-toggle")
+      .modal
+        label(for="modal-toggle" class="modal-overlay")
+        .modal-content
+          h3 Pure CSS Modal
+          p This modal opens and closes without any JavaScript.
+          label(for="modal-toggle" class="btn") Close
+
+      //- Sidebar
+      input(type="checkbox" id="sidebar-toggle" class="sidebar-toggle")
+      .sidebar
+        h3 Sidebar Menu
+        ul
+          each item in sidebarItems
+            li
+              a(href=item.href)= item.text
+        label(for="sidebar-toggle" class="sidebar-close") Close
+      label(for="sidebar-toggle" class="sidebar-overlay")
+
+    script(src="dist/aronnax-styles.js")

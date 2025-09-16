@@ -1,6 +1,6 @@
 # Aronnax Styles
 
-A lightweight, modern, customizable CSS component library with multiple themes and dark/light mode support.
+A lightweight, modern, customizable CSS component library with dark/light mode support.
 
 ## 🚀 Quick Start
 
@@ -32,12 +32,10 @@ import { Aronnax } from 'aronnax-styles';
 
 // Use structured API (recommended)
 Aronnax.mode.toggle();
-Aronnax.theme.set('modern');
 
 // Or import individual functions
-import { toggleMode, setTheme } from 'aronnax-styles';
+import { toggleMode } from 'aronnax-styles';
 toggleMode();
-setTheme('modern');
 ```
 
 #### Rails/Stimulus Integration
@@ -51,10 +49,6 @@ export default class extends Controller {
   switch() {
     Aronnax.mode.toggle();
   }
-  
-  changeTheme() {
-    Aronnax.theme.set('modern');
-  }
 }
 ```
 
@@ -64,7 +58,6 @@ export default class extends Controller {
 <!-- The bundled version makes functions globally available -->
 <script src="node_modules/aronnax-styles/dist/aronnax-styles.min.js"></script>
 <button onclick="toggleMode()">Toggle Dark Mode</button>
-<button onclick="setTheme('modern')">Modern Theme</button>
 ```
 
 ### Development
@@ -87,41 +80,9 @@ npm run build
 
 Open `index.html` in your browser to see all components in action and explore the complete component showcase.
 
-## 🎨 Themes
-
-Aronnax Styles includes multiple themes, each with its own design personality:
-
-### Available Themes
-
-- **Minimal** (default) - Clean and simple with basic styling
-- **Modern** - Tech-focused, pronounced shadows, sharp and efficient
-- **Sharp** - Ultra-minimal with zero border radius, clean lines, and angular precision
-- **Terminal** - Hacker-style minimalistic terminal aesthetic with monospace fonts and matrix-green glow
-
-### Using Themes
-
-**HTML Attribute:**
-```html
-<html data-theme="sharp">
-  <!-- Your content -->
-</html>
-```
-
-**JavaScript:**
-```javascript
-// Set a theme
-setTheme('sharp');
-
-// Get current theme
-const current = getCurrentTheme();
-
-// Get all available themes
-const themes = getAvailableThemes();
-```
-
 ### Dark/Light Mode
 
-Aronnax Styles supports both global dark mode and theme-managed dark mode.
+Aronnax Styles supports both global dark mode.
 
 **Global Dark Mode:**
 ```html
@@ -130,24 +91,10 @@ Aronnax Styles supports both global dark mode and theme-managed dark mode.
 </html>
 ```
 
-**Theme-Managed Dark Mode:**
-```html
-<html data-theme="modern" data-mode="dark">
-  <!-- Uses modern theme's custom dark mode -->
-</html>
-<html data-theme="sharp" data-mode="dark">
-  <!-- Uses sharp theme's custom dark mode -->
-</html>
-```
-
 **JavaScript:**
 ```javascript
 // Toggle between dark and light
 toggleMode();
-
-// Set specific appearance (theme + mode)
-setAppearance('sharp', 'dark');
-```
 
 ## 📦 Components
 

@@ -1,0 +1,35 @@
+//- Buttons Section
+section.mb-4
+  h2.mb-2 Buttons
+  .flex.gap.items-center.flex-wrap.mt-4
+    each button in buttons.primary
+      button(class=`btn ${button.class || ''}` disabled=button.disabled)
+        i(class=button.icon)
+        = button.text
+
+  .flex.gap.items-center.flex-wrap.mt-4
+    each button in buttons.small
+      button(class=`btn btn-sm ${button.class || ''}` disabled=button.disabled)
+        i(class=button.icon)
+        = button.text
+
+  .flex.gap.items-center.flex-wrap.mt-4
+    each button in buttons.outline
+      button(class=`btn btn-outline ${button.class || ''}`)
+        i(class=button.icon)
+        = button.text
+
+  .flex.gap.items-center.flex-wrap.mt-4
+    each button in buttons.special
+      if button.type === 'modal'
+        label(for="modal-toggle" class="btn")
+          i(class=button.icon)
+          = button.text
+      else if button.type === 'sidebar'
+        label(for="sidebar-toggle" class="btn")
+          i(class=button.icon)
+          = button.text
+      else if button.type === 'mode-toggle'
+        button(id="mode-toggle" class="btn" onclick="toggleMode()")
+          i(class=button.icon)
+          span(id="mode-toggle-text")= button.text

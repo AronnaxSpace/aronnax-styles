@@ -12,6 +12,15 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
 
+  /* Spacing - Comfortable and spacious */
+  --padding: 1rem;
+  --padding-xs: 0.25rem;
+  --padding-sm: 0.5rem;
+  --padding-lg: 2rem;
+  --margin-sm: 0.5rem;
+  --margin-md: 0.75rem;
+  --margin-lg: 1rem;
+
   /* Component Sizes */
   --sidebar-width: 250px;
   --modal-max-width: 500px;
@@ -21,7 +30,4 @@
   --gap-sm: 0.5rem;
   --gap-base: 1rem;
   --gap-lg: 2rem;
-
-  /* Note: Theme-specific spacing (padding, margin, border radius, border width) 
-     is now defined in individual theme files under css/themes/ */
 }

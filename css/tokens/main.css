@@ -4,6 +4,7 @@
 
 /* Import all design token files in logical order */
 @import './breakpoints.css';
+@import './borders.css';
 @import './colors.css';
 @import './typography.css';
 @import './spacing.css';

@@ -4,7 +4,7 @@
 
 :root {
   /* Font Families */
-  --font-family-mono: monospace;
+  --font-family: system-ui, sans-serif;
 
   /* Base Font Sizes */
   --font-size-base: 1rem;
@@ -29,6 +29,4 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: bold;
-
-  /* Note: Theme-specific font families are defined in individual theme files under css/themes/ */
 }

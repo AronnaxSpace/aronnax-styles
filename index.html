@@ -1,357 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aronnax Styles Demo</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aronnax Styles Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="dist/aronnax-styles.css">
   </head>
-<body>
-
-  <div class="container">
-
-    <!-- Themes -->
-    <section class="mb-4">
-      <h2 class="mb-2">Themes & Modes</h2>
-      <div class="card">
-        <h3>Current Design System</h3>
-        <p><strong>Theme:</strong> <span id="current-theme">Minimal</span> | <strong>Mode:</strong> <span id="current-mode">Light</span></p>
-        <p>Try switching between different themes using the selector above. Each theme has its own personality:</p>
-        <ul style="text-align: left; margin-top: 1rem;">
-          <li>
-            <strong>Minimal:</strong>
-            <span>Clean, sharp borders, no shadows - perfect for modern interfaces</span>
-            <button onclick="setTheme(this.value)" value="minimal" class="btn-link">Try it</button>
-          </li>
-          <li>
-            <strong>Modern:</strong>
-            <span>Tech-focused, pronounced shadows, sharp and efficient</span>
-            <button onclick="setTheme(this.value)" value="modern" class="btn-link">Try it</button>
-          </li>
-          <li>
-            <strong>Sharp:</strong>
-            <span>Ultra-minimal with zero border radius, clean lines, and angular precision ⚡</span>
-            <button onclick="setTheme(this.value)" value="sharp" class="btn-link">Try it</button>
-          </li>
-          <li>
-            <strong>Terminal:</strong>
-            <span>Hacker-style minimalistic terminal aesthetic with monospace fonts and matrix-green glow 💾</span>
-            <button onclick="setTheme(this.value)" value="terminal" class="btn-link">Try it</button>
-          </li>
+  <body>
+    <div class="container">
+      <section class="mb-4">
+        <h2 class="mb-2">Buttons</h2>
+        <div class="flex gap items-center flex-wrap mt-4">
+          <button class="btn "><i class="fas fa-arrow-right"></i>Primary
+          </button>
+          <button class="btn btn-success"><i class="fas fa-check"></i>Success
+          </button>
+          <button class="btn btn-danger"><i class="fas fa-times"></i>Danger
+          </button>
+          <button class="btn btn-warning"><i class="fas fa-exclamation-triangle"></i>Warning
+          </button>
+          <button class="btn btn-info"><i class="fas fa-info-circle"></i>Info
+          </button>
+          <button class="btn btn-secondary"><i class="fas fa-cog"></i>Secondary
+          </button>
+          <button class="btn " disabled><i class="fas fa-ban"></i>Disabled
+          </button>
+        </div>
+        <div class="flex gap items-center flex-wrap mt-4">
+          <button class="btn btn-sm "><i class="fas fa-arrow-right"></i>Primary
+          </button>
+          <button class="btn btn-sm btn-success"><i class="fas fa-check"></i>Success
+          </button>
+          <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i>Danger
+          </button>
+          <button class="btn btn-sm btn-warning"><i class="fas fa-exclamation-triangle"></i>Warning
+          </button>
+          <button class="btn btn-sm btn-info"><i class="fas fa-info-circle"></i>Info
+          </button>
+          <button class="btn btn-sm btn-secondary"><i class="fas fa-cog"></i>Secondary
+          </button>
+          <button class="btn btn-sm " disabled><i class="fas fa-ban"></i>Disabled
+          </button>
+        </div>
+        <div class="flex gap items-center flex-wrap mt-4">
+          <button class="btn btn-outline "><i class="fas fa-arrow-right"></i>Primary Outline
+          </button>
+          <button class="btn btn-outline btn-success"><i class="fas fa-check"></i>Success Outline
+          </button>
+          <button class="btn btn-outline btn-danger"><i class="fas fa-times"></i>Danger Outline
+          </button>
+          <button class="btn btn-outline btn-warning"><i class="fas fa-exclamation-triangle"></i>Warning Outline
+          </button>
+          <button class="btn btn-outline btn-info"><i class="fas fa-info-circle"></i>Info Outline
+          </button>
+          <button class="btn btn-outline btn-secondary"><i class="fas fa-cog"></i>Secondary Outline
+          </button>
+        </div>
+        <div class="flex gap items-center flex-wrap mt-4">
+          <label class="btn" for="modal-toggle"><i class="fas fa-info-circle"></i>Open Modal
+          </label>
+          <label class="btn" for="sidebar-toggle"><i class="fas fa-bars"></i>Open Sidebar
+          </label>
+          <button class="btn" id="mode-toggle" onclick="toggleMode()"><i class="fas fa-moon"></i><span id="mode-toggle-text">Dark Mode</span></button>
+        </div>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Forms</h2>
+        <div class="card mb-4">
+          <h3 class="mb-3">Contact Form</h3>
+          <form class="form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label required" for="first-name">First Name</label>
+                <input class="form-input" type="text" id="first-name" placeholder="Enter your first name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label required" for="last-name">Last Name</label>
+                <input class="form-input" type="text" id="last-name" placeholder="Enter your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" placeholder="your.email@example.com" required>
+              <div class="form-help">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input class="form-input" type="tel" id="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-select" id="subject">
+                <option value="">Choose a topic...</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="billing">Billing Question</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="message">Message</label>
+              <textarea class="form-textarea" id="message" placeholder="Tell us how we can help you..." rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" required><span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-success" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+              <button class="btn btn-outline" type="reset"><i class="fas fa-undo"></i> Reset</button>
+            </div>
+          </form>
+        </div>
+        <div class="card mb-4">
+          <h3 class="mb-3">Form Validation States</h3>
+          <form class="form">
+            <div class="form-col-2">
+              <div class="form-group success">
+                <label class="form-label" for="success-input">Success State</label>
+                <input class="form-input" type="text" id="success-input" value="Valid input">
+                <div class="form-help">This field is valid!</div>
+              </div>
+              <div class="form-group error">
+                <label class="form-label" for="error-input">Error State</label>
+                <input class="form-input" type="text" id="error-input" value="Invalid input">
+                <div class="form-help">This field has an error.</div>
+              </div>
+            </div>
+            <div class="form-col-2">
+              <div class="form-group warning">
+                <label class="form-label" for="warning-input">Warning State</label>
+                <input class="form-input" type="text" id="warning-input" value="Needs attention">
+                <div class="form-help">Please review this field.</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="disabled-input">Disabled State</label>
+                <input class="form-input" type="text" id="disabled-input" value="Disabled field" disabled>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card mb-4">
+          <h3 class="mb-3">Input Variants & File Upload</h3>
+          <form class="form">
+            <div class="form-col-3">
+              <div class="form-group">
+                <label class="form-label" for="small-input">Small Input</label>
+                <input class="form-input form-input-sm" type="text" id="small-input" placeholder="Small size">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="normal-input">Normal Input</label>
+                <input class="form-input " type="text" id="normal-input" placeholder="Normal size">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="large-input">Large Input</label>
+                <input class="form-input form-input-lg" type="text" id="large-input" placeholder="Large size">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="file-upload">File Upload</label>
+              <div class="form-file">
+                <input type="file" id="file-upload" multiple>
+                <label class="form-file-label" for="file-upload"><i class="fas fa-upload"></i> Choose Files</label>
+              </div>
+              <div class="form-help">Select one or more files to upload.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferences</label>
+              <div class="preferences-container">
+                <label class="form-checkbox">
+                  <input type="checkbox" checked><span>Email notifications</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox"><span>SMS notifications</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" checked><span>Newsletter subscription</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Account Type</label>
+              <div class="account-type-container">
+                <label class="form-radio">
+                  <input type="radio" name="account-type" value="personal" checked><span>Personal</span>
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="account-type" value="business"><span>Business</span>
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="account-type" value="enterprise"><span>Enterprise</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Cards</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap">
+          <div class="card card-post">
+            <h3>Understanding CSS Grid</h3>
+            <p>Learn how to use CSS Grid to build responsive layouts easily and intuitively.</p>
+          </div>
+          <div class="card card-event">
+            <h3>Design Conference</h3>
+            <div class="event-meta">March 18, 2025 · San Francisco, CA</div>
+            <p>Join 1000+ creatives for talks, workshops, and networking.</p>
+          </div>
+          <div class="card card-shop-item"><img src="images/nautilus.webp" alt="Product Image">
+            <h3>Minimalist Lamp</h3>
+            <p></p>
+            <div class="price">$49.99</div>
+          </div>
+        </div>
+      </section>
+      <input class="modal-toggle" type="checkbox" id="modal-toggle">
+      <div class="modal">
+        <label class="modal-overlay" for="modal-toggle"></label>
+        <div class="modal-content">
+          <h3>Pure CSS Modal</h3>
+          <p>This modal opens and closes without any JavaScript.</p>
+          <label class="btn" for="modal-toggle">Close</label>
+        </div>
+      </div>
+      <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle">
+      <div class="sidebar">
+        <h3>Sidebar Menu</h3>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
         </ul>
+        <label class="sidebar-close" for="sidebar-toggle">Close</label>
       </div>
-    </section>
-
-    <!-- Buttons -->
-    <section class="mb-4">
-      <h2 class="mb-2">Buttons</h2>
-      <div class="flex gap items-center flex-wrap mt-4">
-        <button class="btn">
-          <i class="fas fa-arrow-right"></i> Primary
-        </button>
-        <button class="btn btn-success">
-          <i class="fas fa-check"></i> Success
-        </button>
-        <button class="btn btn-danger">
-          <i class="fas fa-times"></i> Danger
-        </button>
-        <button class="btn btn-warning">
-          <i class="fas fa-exclamation-triangle"></i> Warning
-        </button>
-        <button class="btn btn-info">
-          <i class="fas fa-info-circle"></i> Info
-        </button>
-        <button class="btn btn-secondary">
-          <i class="fas fa-cog"></i> Secondary
-        </button>
-        <button class="btn" disabled>
-          <i class="fas fa-ban"></i> Disabled
-        </button>
-      </div>
-      <div class="flex gap items-center flex-wrap mt-4">
-        <button class="btn btn-sm">
-          <i class="fas fa-arrow-right"></i> Primary
-        </button>
-        <button class="btn btn-sm btn-success">
-          <i class="fas fa-check"></i> Success
-        </button>
-        <button class="btn btn-sm btn-danger">
-          <i class="fas fa-times"></i> Danger
-        </button>
-        <button class="btn btn-sm btn-warning">
-          <i class="fas fa-exclamation-triangle"></i> Warning
-        </button>
-        <button class="btn btn-sm btn-info">
-          <i class="fas fa-info-circle"></i> Info
-        </button>
-        <button class="btn btn-sm btn-secondary">
-          <i class="fas fa-cog"></i> Secondary
-        </button>
-        <button class="btn btn-sm" disabled>
-          <i class="fas fa-ban"></i> Disabled
-        </button>
-      </div>
-      <div class="flex gap items-center flex-wrap mt-4">
-        <button class="btn btn-outline">
-          <i class="fas fa-arrow-right"></i> Primary Outline
-        </button>
-        <button class="btn btn-success btn-outline">
-          <i class="fas fa-check"></i> Success Outline
-        </button>
-        <button class="btn btn-danger btn-outline">
-          <i class="fas fa-times"></i> Danger Outline
-        </button>
-        <button class="btn btn-warning btn-outline">
-          <i class="fas fa-exclamation-triangle"></i> Warning Outline
-        </button>
-        <button class="btn btn-info btn-outline">
-          <i class="fas fa-info-circle"></i> Info Outline
-        </button>
-        <button class="btn btn-secondary btn-outline">
-          <i class="fas fa-cog"></i> Secondary Outline
-        </button>
-      </div>
-      <div class="flex gap items-center flex-wrap mt-4">
-        <label for="modal-toggle" class="btn">
-          <i class="fas fa-info-circle"></i> Open Modal
-        </label>
-        <label for="sidebar-toggle" class="btn">
-          <i class="fas fa-bars"></i> Open Sidebar
-        </label>
-        <button id="mode-toggle" class="btn" onclick="toggleMode()">
-          <i class="fas fa-moon"></i> <span id="mode-toggle-text">Dark Mode</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Forms -->
-    <section class="mb-4">
-      <h2 class="mb-2">Forms</h2>
-
-      <!-- Basic Form -->
-      <div class="card mb-4">
-        <h3 class="mb-3">Contact Form</h3>
-        <form class="form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label required" for="first-name">First Name</label>
-              <input type="text" id="first-name" class="form-input" placeholder="Enter your first name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label required" for="last-name">Last Name</label>
-              <input type="text" id="last-name" class="form-input" placeholder="Enter your last name" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label required" for="email">Email Address</label>
-            <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
-            <div class="form-help">We'll never share your email with anyone else.</div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="phone">Phone Number</label>
-            <input type="tel" id="phone" class="form-input" placeholder="(555) 123-4567">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="subject">Subject</label>
-            <select id="subject" class="form-select">
-              <option value="">Choose a topic...</option>
-              <option value="general">General Inquiry</option>
-              <option value="support">Technical Support</option>
-              <option value="billing">Billing Question</option>
-              <option value="feedback">Feedback</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label required" for="message">Message</label>
-            <textarea id="message" class="form-textarea" placeholder="Tell us how we can help you..." rows="4" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-checkbox">
-              <input type="checkbox" required>
-              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
-            </label>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-success">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-            <button type="reset" class="btn btn-outline">
-              <i class="fas fa-undo"></i> Reset
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Form States Demo -->
-      <div class="card mb-4">
-        <h3 class="mb-3">Form Validation States</h3>
-        <form class="form">
-          <div class="form-col-2">
-            <div class="form-group success">
-              <label class="form-label" for="success-input">Success State</label>
-              <input type="text" id="success-input" class="form-input" value="Valid input">
-              <div class="form-help">This field is valid!</div>
-            </div>
-
-            <div class="form-group error">
-              <label class="form-label" for="error-input">Error State</label>
-              <input type="text" id="error-input" class="form-input" value="Invalid input">
-              <div class="form-help">This field has an error.</div>
-            </div>
-          </div>
-
-          <div class="form-col-2">
-            <div class="form-group warning">
-              <label class="form-label" for="warning-input">Warning State</label>
-              <input type="text" id="warning-input" class="form-input" value="Needs attention">
-              <div class="form-help">Please review this field.</div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="disabled-input">Disabled State</label>
-              <input type="text" id="disabled-input" class="form-input" value="Disabled field" disabled>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <!-- Input Variants -->
-      <div class="card mb-4">
-        <h3 class="mb-3">Input Variants & File Upload</h3>
-        <form class="form">
-          <div class="form-col-3">
-            <div class="form-group">
-              <label class="form-label" for="small-input">Small Input</label>
-              <input type="text" id="small-input" class="form-input form-input-sm" placeholder="Small size">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="normal-input">Normal Input</label>
-              <input type="text" id="normal-input" class="form-input" placeholder="Normal size">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="large-input">Large Input</label>
-              <input type="text" id="large-input" class="form-input form-input-lg" placeholder="Large size">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="file-upload">File Upload</label>
-            <div class="form-file">
-              <input type="file" id="file-upload" multiple>
-              <label for="file-upload" class="form-file-label">
-                <i class="fas fa-upload"></i>
-                Choose Files
-              </label>
-            </div>
-            <div class="form-help">Select one or more files to upload.</div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Preferences</label>
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <label class="form-checkbox">
-                <input type="checkbox" checked>
-                <span>Email notifications</span>
-              </label>
-              <label class="form-checkbox">
-                <input type="checkbox">
-                <span>SMS notifications</span>
-              </label>
-              <label class="form-checkbox">
-                <input type="checkbox" checked>
-                <span>Newsletter subscription</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Account Type</label>
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <label class="form-radio">
-                <input type="radio" name="account-type" value="personal" checked>
-                <span>Personal</span>
-              </label>
-              <label class="form-radio">
-                <input type="radio" name="account-type" value="business">
-                <span>Business</span>
-              </label>
-              <label class="form-radio">
-                <input type="radio" name="account-type" value="enterprise">
-                <span>Enterprise</span>
-              </label>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Cards -->
-    <section class="mb-4">
-      <h2 class="mb-2">Cards</h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap">
-
-        <div class="card card-post">
-          <h3>Understanding CSS Grid</h3>
-          <p>Learn how to use CSS Grid to build responsive layouts easily and intuitively.</p>
-        </div>
-
-        <div class="card card-event">
-          <h3><i class="fas fa-calendar-alt"></i> Design Conference</h3>
-          <div class="event-meta">
-            <i class="fas fa-map-marker-alt"></i> March 18, 2025 · San Francisco, CA
-          </div>
-          <p>Join 1000+ creatives for talks, workshops, and networking.</p>
-        </div>
-
-        <div class="card card-shop-item">
-          <img src="images/cat.jpg" alt="Product Image">
-          <h3>Minimalist Lamp</h3>
-          <div class="price">$49.99</div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Modal -->
-    <input type="checkbox" id="modal-toggle" class="modal-toggle">
-
-    <div class="modal">
-      <label for="modal-toggle" class="modal-overlay"></label>
-      <div class="modal-content">
-        <h3>Pure CSS Modal</h3>
-        <p>This modal opens and closes without any JavaScript.</p>
-        <label for="modal-toggle" class="btn">Close</label>
-      </div>
+      <label class="sidebar-overlay" for="sidebar-toggle"></label>
     </div>
-
-    <!-- Sidebar -->
-    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
-
-    <div class="sidebar">
-      <h3>Sidebar Menu</h3>
-      <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-
-      <label for="sidebar-toggle" class="sidebar-close">Close</label>
-    </div>
-
-    <label for="sidebar-toggle" class="sidebar-overlay"></label>
-  </div>
-
-  <script src="dist/aronnax-styles.js"></script>
-
-</body>
+    <script src="dist/aronnax-styles.js"></script>
+  </body>
 </html>

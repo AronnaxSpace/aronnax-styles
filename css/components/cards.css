@@ -16,7 +16,6 @@
 }
 
 .card p {
-  font-size: var(--font-size-xs);
   color: var(--text-muted);
 }
 

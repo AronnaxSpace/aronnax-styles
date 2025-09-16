@@ -5,8 +5,8 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-
-  /* Theme-specific Shadow Usage (Minimal theme defaults - no shadows) */
+  
+  /* Component-Specific Shadows */
   --card-shadow: none;
   --button-shadow: none;
   --modal-shadow: none;

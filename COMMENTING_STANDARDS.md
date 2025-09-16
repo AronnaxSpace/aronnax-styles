@@ -54,7 +54,7 @@ For smaller subsections, use simple JSDoc-style comments:
 For explaining specific rules or properties:
 
 ```css
-/** Prevent transition flash during theme switching */
+/** Prevent transition flash during mode switching */
 .no-transition * {
   transition: none !important;
 }

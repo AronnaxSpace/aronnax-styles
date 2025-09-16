@@ -1,0 +1,7 @@
+:root {
+  --border-width: 1px;
+  --border-radius: 1rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.75rem;
+  --rounded-full: 9999px;
+}

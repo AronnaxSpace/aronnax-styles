@@ -1,0 +1,111 @@
+//- Forms Section
+section.mb-4
+  h2.mb-2 Forms
+
+  //- Basic Form
+  .card.mb-4
+    h3.mb-3 Contact Form
+    form.form
+      .form-row
+        .form-group
+          label.form-label.required(for="first-name") First Name
+          input(type="text" id="first-name" class="form-input" placeholder="Enter your first name" required)
+        .form-group
+          label.form-label.required(for="last-name") Last Name
+          input(type="text" id="last-name" class="form-input" placeholder="Enter your last name" required)
+
+      .form-group
+        label.form-label.required(for="email") Email Address
+        input(type="email" id="email" class="form-input" placeholder="your.email@example.com" required)
+        .form-help We'll never share your email with anyone else.
+
+      .form-group
+        label.form-label(for="phone") Phone Number
+        input(type="tel" id="phone" class="form-input" placeholder="(555) 123-4567")
+
+      .form-group
+        label.form-label(for="subject") Subject
+        select(id="subject" class="form-select")
+          option(value="") Choose a topic...
+          each option in formOptions.subjects
+            option(value=option.value)= option.text
+
+      .form-group
+        label.form-label.required(for="message") Message
+        textarea(id="message" class="form-textarea" placeholder="Tell us how we can help you..." rows="4" required)
+
+      .form-group
+        label.form-checkbox
+          input(type="checkbox" required)
+          span I agree to the 
+            a(href="#") Terms of Service
+            |  and 
+            a(href="#") Privacy Policy
+
+      .form-actions
+        button(type="submit" class="btn btn-success")
+          i.fas.fa-paper-plane
+          |  Send Message
+        button(type="reset" class="btn btn-outline")
+          i.fas.fa-undo
+          |  Reset
+
+  //- Form States Demo
+  .card.mb-4
+    h3.mb-3 Form Validation States
+    form.form
+      .form-col-2
+        .form-group.success
+          label.form-label(for="success-input") Success State
+          input(type="text" id="success-input" class="form-input" value="Valid input")
+          .form-help This field is valid!
+
+        .form-group.error
+          label.form-label(for="error-input") Error State
+          input(type="text" id="error-input" class="form-input" value="Invalid input")
+          .form-help This field has an error.
+
+      .form-col-2
+        .form-group.warning
+          label.form-label(for="warning-input") Warning State
+          input(type="text" id="warning-input" class="form-input" value="Needs attention")
+          .form-help Please review this field.
+
+        .form-group
+          label.form-label(for="disabled-input") Disabled State
+          input(type="text" id="disabled-input" class="form-input" value="Disabled field" disabled)
+
+  //- Input Variants
+  .card.mb-4
+    h3.mb-3 Input Variants & File Upload
+    form.form
+      .form-col-3
+        each input in formInputs.sizes
+          .form-group
+            label.form-label(for=input.id)= input.label
+            input(type="text" id=input.id class=`form-input ${input.class || ''}` placeholder=input.placeholder)
+
+      .form-group
+        label.form-label(for="file-upload") File Upload
+        .form-file
+          input(type="file" id="file-upload" multiple)
+          label(for="file-upload" class="form-file-label")
+            i.fas.fa-upload
+            |  Choose Files
+        .form-help Select one or more files to upload.
+
+      .form-group
+        label.form-label Preferences
+        .preferences-container
+          each checkbox in formInputs.checkboxes
+            label.form-checkbox
+              input(type="checkbox" checked=checkbox.checked)
+              span= checkbox.text
+
+      .form-group
+        label.form-label Account Type
+        .account-type-container
+          each radio in formInputs.radios
+            label.form-radio
+              input(type="radio" name="account-type" value=radio.value checked=radio.checked)
+              span= radio.text
