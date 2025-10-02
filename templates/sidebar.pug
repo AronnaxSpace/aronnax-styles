@@ -1,0 +1,9 @@
+input(type="checkbox" id="sidebar-toggle" class="sidebar-toggle")
+.sidebar
+  h3 Sidebar Menu
+  ul
+    each item in sidebarItems
+      li
+        a(href=item.href)= item.text
+  label(for="sidebar-toggle" class="sidebar-close") Close
+label(for="sidebar-toggle" class="sidebar-overlay")
