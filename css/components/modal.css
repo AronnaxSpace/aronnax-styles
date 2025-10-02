@@ -77,15 +77,6 @@
   color: var(--text-color);
 }
 
-.modal-close-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .modal-body {
   padding: var(--padding-lg);
 }

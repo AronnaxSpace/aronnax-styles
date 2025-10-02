@@ -57,15 +57,6 @@
   color: var(--text-color);
 }
 
-.sidebar-close-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .sidebar-content {
   flex: 1;
   padding: var(--padding);
@@ -103,13 +94,10 @@
 }
 
 .sidebar-nav-icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  font-size: 1rem;
+  width: 1rem;
   margin-right: var(--space-3);
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  text-align: center;
 }
 
 .sidebar-nav-text {
