@@ -1,0 +1,193 @@
+//- Lists Section
+section.mb-4
+  h2.mb-2 Lists
+  
+  //- Todo Items List
+  h3.mb-2 Todo Items
+  .card.mb-4
+    .list-header
+      h4.list-title Today's Tasks
+      span.badge.badge-secondary.badge-lg 4 items
+    ul.list.list-todo
+      li.list-item.list-item-todo
+        .list-item-content
+          input(type="checkbox" id="todo-1" class="todo-checkbox")
+          label(for="todo-1" class="todo-label")
+            span.todo-text Complete project documentation
+          .todo-actions
+            button.todo-action-btn(title="Edit")
+              i.fas.fa-edit
+            button.todo-action-btn(title="Delete")
+              i.fas.fa-trash
+        .todo-meta
+          span.badge.badge-danger High
+          span.todo-due-date Due: Today
+      li.list-item.list-item-todo
+        .list-item-content
+          input(type="checkbox" id="todo-2" class="todo-checkbox" checked)
+          label(for="todo-2" class="todo-label")
+            span.todo-text Review code changes
+          .todo-actions
+            button.todo-action-btn(title="Edit")
+              i.fas.fa-edit
+            button.todo-action-btn(title="Delete")
+              i.fas.fa-trash
+        .todo-meta
+          span.badge.badge-warning Medium
+          span.todo-due-date Due: Tomorrow
+      li.list-item.list-item-todo
+        .list-item-content
+          input(type="checkbox" id="todo-3" class="todo-checkbox")
+          label(for="todo-3" class="todo-label")
+            span.todo-text Update design system
+          .todo-actions
+            button.todo-action-btn(title="Edit")
+              i.fas.fa-edit
+            button.todo-action-btn(title="Delete")
+              i.fas.fa-trash
+        .todo-meta
+          span.badge.badge-secondary Low
+          span.todo-due-date Due: Next week
+      li.list-item.list-item-todo
+        .list-item-content
+          input(type="checkbox" id="todo-4" class="todo-checkbox")
+          label(for="todo-4" class="todo-label")
+            span.todo-text Plan team meeting
+          .todo-actions
+            button.todo-action-btn(title="Edit")
+              i.fas.fa-edit
+            button.todo-action-btn(title="Delete")
+              i.fas.fa-trash
+        .todo-meta
+          span.badge.badge-warning Medium
+          span.todo-due-date Due: Friday
+
+  //- User List
+  h3.mb-2 User List
+  .card.mb-4
+    .list-header
+      h4.list-title Team Members
+      span.badge.badge-secondary.badge-lg 5 users
+    ul.list.list-users
+      li.list-item.list-item-user
+        .list-item-content
+          img.user-avatar(src="images/aronnax-square.webp" alt="User Avatar")
+          .user-info
+            .user-name John Doe
+            .user-role Frontend Developer
+            span.badge.badge-success Online
+          .user-actions
+            button.user-action-btn(title="Message")
+              i.fas.fa-comment
+            button.user-action-btn(title="Profile")
+              i.fas.fa-user
+      li.list-item.list-item-user
+        .list-item-content
+          img.user-avatar(src="images/nautilus.webp" alt="User Avatar")
+          .user-info
+            .user-name Sarah Wilson
+            .user-role UI/UX Designer
+            span.badge.badge-danger Away
+          .user-actions
+            button.user-action-btn(title="Message")
+              i.fas.fa-comment
+            button.user-action-btn(title="Profile")
+              i.fas.fa-user
+      li.list-item.list-item-user
+        .list-item-content
+          img.user-avatar(src="images/aronnax.webp" alt="User Avatar")
+          .user-info
+            .user-name Mike Chen
+            .user-role Backend Developer
+            span.badge.badge-danger Offline
+          .user-actions
+            button.user-action-btn(title="Message")
+              i.fas.fa-comment
+            button.user-action-btn(title="Profile")
+              i.fas.fa-user
+      li.list-item.list-item-user
+        .list-item-content
+          img.user-avatar(src="images/aronnax-square.webp" alt="User Avatar")
+          .user-info
+            .user-name Alex Johnson
+            .user-role Project Manager
+            span.badge.badge-success Online
+          .user-actions
+            button.user-action-btn(title="Message")
+              i.fas.fa-comment
+            button.user-action-btn(title="Profile")
+              i.fas.fa-user
+      li.list-item.list-item-user
+        .list-item-content
+          img.user-avatar(src="images/nautilus.webp" alt="User Avatar")
+          .user-info
+            .user-name Emma Davis
+            .user-role QA Engineer
+            span.badge.badge-warning Busy
+          .user-actions
+            button.user-action-btn(title="Message")
+              i.fas.fa-comment
+            button.user-action-btn(title="Profile")
+              i.fas.fa-user
+
+  //- Account Operations List
+  h3.mb-2 Account Operations
+  .card.mb-4
+    .list-header
+      h4.list-title Recent Transactions
+      span.badge.badge-secondary.badge-lg 6 transactions
+    ul.list.list-operations
+      li.list-item.list-item-operation
+        .list-item-content
+          .operation-icon.operation-income
+            i.fas.fa-arrow-down
+          .operation-details
+            .operation-title Salary Payment
+            .operation-description Monthly salary from Acme Corp
+            .operation-date 2024-01-15 09:30
+          .operation-amount.amount-positive +$4,500.00
+      li.list-item.list-item-operation
+        .list-item-content
+          .operation-icon.operation-expense
+            i.fas.fa-arrow-up
+          .operation-details
+            .operation-title Grocery Shopping
+            .operation-description Supermarket purchase
+            .operation-date 2024-01-14 18:45
+          .operation-amount.amount-negative -$127.50
+      li.list-item.list-item-operation
+        .list-item-content
+          .operation-icon.operation-transfer
+            i.fas.fa-exchange-alt
+          .operation-details
+            .operation-title Transfer to Savings
+            .operation-description Monthly savings transfer
+            .operation-date 2024-01-14 10:00
+          .operation-amount.amount-negative -$500.00
+      li.list-item.list-item-operation
+        .list-item-content
+          .operation-icon.operation-payment
+            i.fas.fa-credit-card
+          .operation-details
+            .operation-title Credit Card Payment
+            .operation-description Monthly credit card bill
+            .operation-date 2024-01-13 14:20
+          .operation-amount.amount-negative -$1,250.00
+      li.list-item.list-item-operation
+        .list-item-content
+          .operation-icon.operation-income
+            i.fas.fa-arrow-down
+          .operation-details
+            .operation-title Freelance Payment
+            .operation-description Web development project
+            .operation-date 2024-01-12 16:30
+          .operation-amount.amount-positive +$800.00
+      li.list-item.list-item-operation
+        .list-item-content
+          .operation-icon.operation-expense
+            i.fas.fa-arrow-up
+          .operation-details
+            .operation-title Restaurant
+            .operation-description Dinner with friends
+            .operation-date 2024-01-11 20:15
+          .operation-amount.amount-negative -$85.75
