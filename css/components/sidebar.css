@@ -22,6 +22,30 @@
   overflow-y: auto;
 }
 
+.sidebar-static {
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for static sidebar */
+.sidebar-static::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-static::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  border-radius: 3px;
+}
+
+.sidebar-static::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+
+.sidebar-static::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
+
 .sidebar-header {
   display: flex;
   align-items: center;
@@ -60,6 +84,12 @@
 .sidebar-content {
   flex: 1;
   padding: var(--padding);
+  overflow-y: auto;
+}
+
+.sidebar-static .sidebar-content {
+  padding: 0;
+  flex: 1;
   overflow-y: auto;
 }
 
