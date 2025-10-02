@@ -32,17 +32,17 @@
 }
 
 [data-mode="dark"] .card {
-  background-color: var(--white);
+  background-color: #111111;
   border-color: var(--border-color);
 }
 
 [data-mode="dark"] .modal-content {
-  background-color: var(--white);
+  background-color: #111111;
   border-color: var(--border-color);
 }
 
 [data-mode="dark"] .sidebar {
-  background-color: var(--white);
+  background-color: #111111;
   border-color: var(--border-color);
 }
 
@@ -50,6 +50,24 @@
 [data-mode="dark"] code {
   background-color: var(--code-bg);
   color: var(--text-color);
+}
+
+/* Enhanced dark mode contrast */
+[data-mode="dark"] .btn {
+  border-color: var(--border-color);
+}
+
+[data-mode="dark"] .btn:hover {
+  background-color: #1a1a1a;
+  border-color: #666666;
+}
+
+[data-mode="dark"] .btn-outline {
+  border-color: var(--border-color);
+}
+
+[data-mode="dark"] .btn-outline:hover {
+  background-color: #1a1a1a;
 }
 
 /* Optional: Images in dark mode */

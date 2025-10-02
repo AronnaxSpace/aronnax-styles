@@ -1,6 +1,18 @@
 /* Aronnax Styles: Z-Index Design Tokens */
 
 :root {
+  /* Base layers */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  
+  /* Overlay layers */
+  --z-overlay: 100;
   --z-modal-overlay: 999;
   --z-modal-content: 1000;
+  
+  /* Top layer */
+  --z-toast: 1100;
+  --z-tooltip: 1200;
 }

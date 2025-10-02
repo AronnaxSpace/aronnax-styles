@@ -15,6 +15,7 @@
   display: none;
   align-items: center;
   justify-content: center;
+  padding: var(--padding);
 }
 
 .modal-overlay {
@@ -25,22 +26,114 @@
   width: 100%;
   height: 100%;
   background: var(--overlay-dark);
+  cursor: pointer;
 }
 
 .modal-content {
   position: relative;
   z-index: var(--z-modal-content);
   background-color: var(--white);
-  padding: var(--padding-lg);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: var(--modal-shadow);
   max-width: var(--modal-max-width);
-  width: var(--container-max-width);
-  text-align: center;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn var(--transition-normal) ease-out;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding) var(--padding-lg);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--text-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-color);
+}
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.modal-close:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.modal-body {
+  padding: var(--padding-lg);
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--padding) var(--padding-lg);
+  border-top: var(--border-width) solid var(--border-color);
+}
+
+/* Modal sizes */
+.modal-sm .modal-content {
+  max-width: 400px;
+}
+
+.modal-lg .modal-content {
+  max-width: 800px;
+}
+
+.modal-xl .modal-content {
+  max-width: 1200px;
 }
 
 /* Open modal when checkbox is checked */
 .modal-toggle:checked + .modal {
   display: flex;
+}
+
+/* Animations */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+  .modal {
+    padding: var(--space-4);
+  }
+  
+  .modal-content {
+    max-height: 95vh;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+  }
 }

@@ -1,0 +1,10 @@
+input(type="checkbox" id="sidebar-toggle" class="sidebar-toggle")
+.sidebar
+  .sidebar-header
+    h3.sidebar-title Navigation
+    label(for="sidebar-toggle" class="sidebar-close")
+      i.fas.fa-times
+  include sections/sidebar_content
+  .sidebar-footer
+    p(style="color: var(--text-muted); font-size: var(--font-size-sm); margin: 0;") Version 0.3.0
+label(for="sidebar-toggle" class="sidebar-overlay")

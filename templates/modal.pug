@@ -1,0 +1,13 @@
+input(type="checkbox" id="modal-toggle" class="modal-toggle")
+.modal
+  label(for="modal-toggle" class="modal-overlay")
+  .modal-content
+    .modal-header
+      h3.modal-title Confirmation
+      label(for="modal-toggle" class="modal-close")
+        i.fas.fa-times
+    .modal-body
+      p Are you sure you want to delete this item? This action cannot be undone.
+    .modal-footer
+      label(for="modal-toggle" class="btn btn-secondary") Cancel
+      button.btn.btn-danger Delete Item

@@ -1,0 +1,275 @@
+/**
+ * Aronnax Styles: List Components
+ */
+
+/* Base List Styles */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-fast);
+  margin-bottom: 0;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item:hover {
+  background-color: var(--secondary-color);
+}
+
+.list-item-content {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4);
+  gap: var(--space-3);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-4) var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-title {
+  margin: 0;
+  font-size: var(--text-h5);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-color);
+}
+
+/* Todo List Styles */
+.list-todo .list-item-todo {
+  position: relative;
+}
+
+.todo-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background: var(--white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.todo-checkbox:checked {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.todo-label {
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-2);
+}
+
+.todo-text {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  transition: text-decoration var(--transition-fast);
+}
+
+.todo-checkbox:checked + .todo-label .todo-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.todo-actions {
+  display: flex;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.list-item-todo:hover .todo-actions {
+  opacity: 1;
+}
+
+.todo-action-btn {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-action-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.todo-meta {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  padding-left: 3.5rem;
+  padding-bottom: var(--space-2);
+}
+
+/* Todo priority badges now use unified badge system */
+
+.todo-due-date {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* User List Styles */
+.user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.user-info {
+  flex: 1;
+  margin-left: var(--space-3);
+}
+
+.user-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-color);
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+.user-role {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin: var(--space-1) 0;
+}
+
+/* User status badges now use unified badge system */
+
+.user-actions {
+  display: flex;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.list-item-user:hover .user-actions {
+  opacity: 1;
+}
+
+.user-action-btn {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-action-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Account Operations List Styles */
+.operation-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.operation-income {
+  background-color: var(--success-color);
+}
+
+.operation-expense {
+  background-color: var(--danger-color);
+}
+
+.operation-transfer {
+  background-color: var(--info-color);
+}
+
+.operation-payment {
+  background-color: var(--warning-color);
+}
+
+.operation-details {
+  flex: 1;
+  margin-left: var(--space-3);
+}
+
+.operation-title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-color);
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+.operation-description {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin: var(--space-1) 0;
+}
+
+.operation-date {
+  color: var(--text-light);
+  font-size: var(--font-size-xs);
+}
+
+.operation-amount {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+}
+
+.amount-positive {
+  color: var(--success-color);
+}
+
+.amount-negative {
+  color: var(--danger-color);
+}
+
+/* Responsive Lists */
+@media (max-width: 768px) {
+  .list-item-content {
+    padding: var(--space-3);
+    gap: var(--space-2);
+  }
+  
+  .todo-meta {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .user-actions,
+  .todo-actions {
+    opacity: 1;
+  }
+  
+  .operation-details {
+    margin-left: var(--space-2);
+  }
+}

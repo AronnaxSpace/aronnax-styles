@@ -1,7 +1,10 @@
 //- Cards Section
 section.mb-4
   h2.mb-2 Cards
-  .grid(class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap")
+  
+  //- Basic
+  h3.mb-2 Basic
+  .cards-grid.mb-4
     each card in cards
       .card(class=card.class)
         if card.image
@@ -12,3 +15,153 @@ section.mb-4
         p= card.description
         if card.price
           .price= card.price
+
+  //- Posts
+  h3.mb-2 Posts
+  .cards-grid.mb-4
+    .card.card-post
+      .card-post-header
+        img.card-post-avatar(src="images/aronnax-square.webp" alt="User Avatar")
+        .card-post-user
+          h4.card-post-name John Doe
+          p.card-post-handle @johndoe
+        p.card-post-time 2h
+      .card-post-content
+        p Just finished an amazing project using Aronnax Styles! The design system is incredibly clean and modern. 🚀
+        img.card-post-image(src="images/aronnax.webp" alt="Project Screenshot")
+      .card-post-actions
+        a.card-post-action(href="#")
+          i.fas.fa-heart
+          span 24
+        a.card-post-action(href="#")
+          i.fas.fa-comment
+          span 8
+        a.card-post-action(href="#")
+          i.fas.fa-share
+          span 3
+        a.card-post-action(href="#")
+          i.fas.fa-bookmark
+          span Save
+
+    .card.card-post
+      .card-post-header
+        img.card-post-avatar(src="images/nautilus.webp" alt="User Avatar")
+        .card-post-user
+          h4.card-post-name Sarah Wilson
+          p.card-post-handle @sarahw
+        p.card-post-time 5h
+      .card-post-content
+        p Working on a new UI kit called Nautilus. The component library is growing fast! Can't wait to share it with the community. 💻✨
+        img.card-post-image(src="images/aronnax-square.webp" alt="UI Kit Preview")
+      .card-post-actions
+        a.card-post-action(href="#")
+          i.fas.fa-heart
+          span 156
+        a.card-post-action(href="#")
+          i.fas.fa-comment
+          span 23
+        a.card-post-action(href="#")
+          i.fas.fa-share
+          span 12
+        a.card-post-action(href="#")
+          i.fas.fa-bookmark
+          span Save
+
+    .card.card-post
+      .card-post-header
+        img.card-post-avatar(src="images/aronnax.webp" alt="User Avatar")
+        .card-post-user
+          h4.card-post-name Mike Chen
+          p.card-post-handle @mikechen
+        p.card-post-time 1d
+      .card-post-content
+        p Dark mode is the future! Just implemented it in our design system and the results are stunning. The pure black background looks so professional. 🌙
+      .card-post-actions
+        a.card-post-action(href="#")
+          i.fas.fa-heart
+          span 89
+        a.card-post-action(href="#")
+          i.fas.fa-comment
+          span 15
+        a.card-post-action(href="#")
+          i.fas.fa-share
+          span 7
+        a.card-post-action(href="#")
+          i.fas.fa-bookmark
+          span Save
+
+  //- Accounts
+  h3.mb-2 Accounts
+  .cards-grid.mb-4
+    .card.card-bank
+      .card-bank-header
+        p.card-bank-type Premium Account
+        i.fas.fa-credit-card
+      .card-bank-balance $12,450.00
+      .card-bank-number **** **** **** 1234
+      .card-bank-footer
+        p.card-bank-holder John Doe
+        p.card-bank-expiry 12/25
+
+    .card.card-bank(style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);")
+      .card-bank-header
+        p.card-bank-type Business Account
+        i.fas.fa-building
+      .card-bank-balance $45,230.00
+      .card-bank-number **** **** **** 5678
+      .card-bank-footer
+        p.card-bank-holder Acme Corp
+        p.card-bank-expiry 08/26
+
+  //- Goods
+  h3.mb-2 Goods
+  .cards-grid.mb-4
+    .card.card-eshop
+      img.card-eshop-image(src="images/aronnax.webp" alt="Aronnax Product")
+      .card-eshop-content
+        p.card-eshop-category Technology
+        h3.card-eshop-title Aronnax Design System
+        p.card-eshop-description A modern, lightweight CSS framework for building beautiful user interfaces with dark mode support.
+        .card-eshop-footer
+          p.card-eshop-price $29.99
+          .card-eshop-rating
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            span (4.9)
+
+    .card.card-eshop
+      img.card-eshop-image(src="images/nautilus.webp" alt="Nautilus Product")
+      .card-eshop-content
+        p.card-eshop-category Design
+        h3.card-eshop-title Nautilus UI Kit
+        p.card-eshop-description Complete UI component library with 50+ components and multiple themes.
+        .card-eshop-footer
+          p.card-eshop-price $49.99
+          .card-eshop-rating
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.far.fa-star
+            span (4.2)
+      .card-eshop-badge Sale
+
+    .card.card-eshop
+      img.card-eshop-image(src="images/aronnax-square.webp" alt="Premium Package")
+      .card-eshop-content
+        p.card-eshop-category Bundle
+        h3.card-eshop-title Premium Package
+        p.card-eshop-description Everything you need to build modern web applications. Includes all our products and premium support.
+        .card-eshop-footer
+          p.card-eshop-price $99.99
+          .card-eshop-rating
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            span (5.0)
+      .card-eshop-badge(style="background-color: var(--success-color);") New

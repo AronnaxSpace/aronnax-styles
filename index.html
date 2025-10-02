@@ -200,7 +200,8 @@
       </section>
       <section class="mb-4">
         <h2 class="mb-2">Cards</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap">
+        <h3 class="mb-2">Basic</h3>
+        <div class="cards-grid mb-4">
           <div class="card card-post">
             <h3>Understanding CSS Grid</h3>
             <p>Learn how to use CSS Grid to build responsive layouts easily and intuitively.</p>
@@ -216,25 +217,396 @@
             <div class="price">$49.99</div>
           </div>
         </div>
+        <h3 class="mb-2">Posts</h3>
+        <div class="cards-grid mb-4">
+          <div class="card card-post">
+            <div class="card-post-header"><img class="card-post-avatar" src="images/aronnax-square.webp" alt="User Avatar">
+              <div class="card-post-user">
+                <h4 class="card-post-name">John Doe</h4>
+                <p class="card-post-handle">@johndoe</p>
+              </div>
+              <p class="card-post-time">2h</p>
+            </div>
+            <div class="card-post-content">
+              <p>Just finished an amazing project using Aronnax Styles! The design system is incredibly clean and modern. 🚀</p><img class="card-post-image" src="images/aronnax.webp" alt="Project Screenshot">
+            </div>
+            <div class="card-post-actions"><a class="card-post-action" href="#"><i class="fas fa-heart"></i><span>24</span></a><a class="card-post-action" href="#"><i class="fas fa-comment"></i><span>8</span></a><a class="card-post-action" href="#"><i class="fas fa-share"></i><span>3</span></a><a class="card-post-action" href="#"><i class="fas fa-bookmark"></i><span>Save</span></a></div>
+          </div>
+          <div class="card card-post">
+            <div class="card-post-header"><img class="card-post-avatar" src="images/nautilus.webp" alt="User Avatar">
+              <div class="card-post-user">
+                <h4 class="card-post-name">Sarah Wilson</h4>
+                <p class="card-post-handle">@sarahw</p>
+              </div>
+              <p class="card-post-time">5h</p>
+            </div>
+            <div class="card-post-content">
+              <p>Working on a new UI kit called Nautilus. The component library is growing fast! Can't wait to share it with the community. 💻✨</p><img class="card-post-image" src="images/aronnax-square.webp" alt="UI Kit Preview">
+            </div>
+            <div class="card-post-actions"><a class="card-post-action" href="#"><i class="fas fa-heart"></i><span>156</span></a><a class="card-post-action" href="#"><i class="fas fa-comment"></i><span>23</span></a><a class="card-post-action" href="#"><i class="fas fa-share"></i><span>12</span></a><a class="card-post-action" href="#"><i class="fas fa-bookmark"></i><span>Save</span></a></div>
+          </div>
+          <div class="card card-post">
+            <div class="card-post-header"><img class="card-post-avatar" src="images/aronnax.webp" alt="User Avatar">
+              <div class="card-post-user">
+                <h4 class="card-post-name">Mike Chen</h4>
+                <p class="card-post-handle">@mikechen</p>
+              </div>
+              <p class="card-post-time">1d</p>
+            </div>
+            <div class="card-post-content">
+              <p>Dark mode is the future! Just implemented it in our design system and the results are stunning. The pure black background looks so professional. 🌙</p>
+            </div>
+            <div class="card-post-actions"><a class="card-post-action" href="#"><i class="fas fa-heart"></i><span>89</span></a><a class="card-post-action" href="#"><i class="fas fa-comment"></i><span>15</span></a><a class="card-post-action" href="#"><i class="fas fa-share"></i><span>7</span></a><a class="card-post-action" href="#"><i class="fas fa-bookmark"></i><span>Save</span></a></div>
+          </div>
+        </div>
+        <h3 class="mb-2">Accounts</h3>
+        <div class="cards-grid mb-4">
+          <div class="card card-bank">
+            <div class="card-bank-header">
+              <p class="card-bank-type">Premium Account</p><i class="fas fa-credit-card"></i>
+            </div>
+            <div class="card-bank-balance">$12,450.00</div>
+            <div class="card-bank-number">**** **** **** 1234</div>
+            <div class="card-bank-footer">
+              <p class="card-bank-holder">John Doe</p>
+              <p class="card-bank-expiry">12/25</p>
+            </div>
+          </div>
+          <div class="card card-bank" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+            <div class="card-bank-header">
+              <p class="card-bank-type">Business Account</p><i class="fas fa-building"></i>
+            </div>
+            <div class="card-bank-balance">$45,230.00</div>
+            <div class="card-bank-number">**** **** **** 5678</div>
+            <div class="card-bank-footer">
+              <p class="card-bank-holder">Acme Corp</p>
+              <p class="card-bank-expiry">08/26</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="mb-2">Goods</h3>
+        <div class="cards-grid mb-4">
+          <div class="card card-eshop"><img class="card-eshop-image" src="images/aronnax.webp" alt="Aronnax Product">
+            <div class="card-eshop-content">
+              <p class="card-eshop-category">Technology</p>
+              <h3 class="card-eshop-title">Aronnax Design System</h3>
+              <p class="card-eshop-description">A modern, lightweight CSS framework for building beautiful user interfaces with dark mode support.</p>
+              <div class="card-eshop-footer">
+                <p class="card-eshop-price">$29.99</p>
+                <div class="card-eshop-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(4.9)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-eshop"><img class="card-eshop-image" src="images/nautilus.webp" alt="Nautilus Product">
+            <div class="card-eshop-content">
+              <p class="card-eshop-category">Design</p>
+              <h3 class="card-eshop-title">Nautilus UI Kit</h3>
+              <p class="card-eshop-description">Complete UI component library with 50+ components and multiple themes.</p>
+              <div class="card-eshop-footer">
+                <p class="card-eshop-price">$49.99</p>
+                <div class="card-eshop-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(4.2)</span></div>
+              </div>
+            </div>
+            <div class="card-eshop-badge">Sale</div>
+          </div>
+          <div class="card card-eshop"><img class="card-eshop-image" src="images/aronnax-square.webp" alt="Premium Package">
+            <div class="card-eshop-content">
+              <p class="card-eshop-category">Bundle</p>
+              <h3 class="card-eshop-title">Premium Package</h3>
+              <p class="card-eshop-description">Everything you need to build modern web applications. Includes all our products and premium support.</p>
+              <div class="card-eshop-footer">
+                <p class="card-eshop-price">$99.99</p>
+                <div class="card-eshop-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(5.0)</span></div>
+              </div>
+            </div>
+            <div class="card-eshop-badge" style="background-color: var(--success-color);">New</div>
+          </div>
+        </div>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Lists</h2>
+        <h3 class="mb-2">Todo Items</h3>
+        <div class="card mb-4">
+          <div class="list-header">
+            <h4 class="list-title">Today's Tasks</h4><span class="badge badge-secondary badge-lg">4 items</span>
+          </div>
+          <ul class="list list-todo">
+            <li class="list-item list-item-todo">
+              <div class="list-item-content">
+                <input class="todo-checkbox" type="checkbox" id="todo-1">
+                <label class="todo-label" for="todo-1"><span class="todo-text">Complete project documentation</span></label>
+                <div class="todo-actions">
+                  <button class="todo-action-btn" title="Edit"><i class="fas fa-edit"></i></button>
+                  <button class="todo-action-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+              </div>
+              <div class="todo-meta"><span class="badge badge-danger">High</span><span class="todo-due-date">Due: Today</span></div>
+            </li>
+            <li class="list-item list-item-todo">
+              <div class="list-item-content">
+                <input class="todo-checkbox" type="checkbox" id="todo-2" checked>
+                <label class="todo-label" for="todo-2"><span class="todo-text">Review code changes</span></label>
+                <div class="todo-actions">
+                  <button class="todo-action-btn" title="Edit"><i class="fas fa-edit"></i></button>
+                  <button class="todo-action-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+              </div>
+              <div class="todo-meta"><span class="badge badge-warning">Medium</span><span class="todo-due-date">Due: Tomorrow</span></div>
+            </li>
+            <li class="list-item list-item-todo">
+              <div class="list-item-content">
+                <input class="todo-checkbox" type="checkbox" id="todo-3">
+                <label class="todo-label" for="todo-3"><span class="todo-text">Update design system</span></label>
+                <div class="todo-actions">
+                  <button class="todo-action-btn" title="Edit"><i class="fas fa-edit"></i></button>
+                  <button class="todo-action-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+              </div>
+              <div class="todo-meta"><span class="badge badge-secondary">Low</span><span class="todo-due-date">Due: Next week</span></div>
+            </li>
+            <li class="list-item list-item-todo">
+              <div class="list-item-content">
+                <input class="todo-checkbox" type="checkbox" id="todo-4">
+                <label class="todo-label" for="todo-4"><span class="todo-text">Plan team meeting</span></label>
+                <div class="todo-actions">
+                  <button class="todo-action-btn" title="Edit"><i class="fas fa-edit"></i></button>
+                  <button class="todo-action-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+              </div>
+              <div class="todo-meta"><span class="badge badge-warning">Medium</span><span class="todo-due-date">Due: Friday</span></div>
+            </li>
+          </ul>
+        </div>
+        <h3 class="mb-2">User List</h3>
+        <div class="card mb-4">
+          <div class="list-header">
+            <h4 class="list-title">Team Members</h4><span class="badge badge-secondary badge-lg">5 users</span>
+          </div>
+          <ul class="list list-users">
+            <li class="list-item list-item-user">
+              <div class="list-item-content"><img class="user-avatar" src="images/aronnax-square.webp" alt="User Avatar">
+                <div class="user-info">
+                  <div class="user-name">John Doe</div>
+                  <div class="user-role">Frontend Developer</div><span class="badge badge-success">Online</span>
+                </div>
+                <div class="user-actions">
+                  <button class="user-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="user-action-btn" title="Profile"><i class="fas fa-user"></i></button>
+                </div>
+              </div>
+            </li>
+            <li class="list-item list-item-user">
+              <div class="list-item-content"><img class="user-avatar" src="images/nautilus.webp" alt="User Avatar">
+                <div class="user-info">
+                  <div class="user-name">Sarah Wilson</div>
+                  <div class="user-role">UI/UX Designer</div><span class="badge badge-danger">Away</span>
+                </div>
+                <div class="user-actions">
+                  <button class="user-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="user-action-btn" title="Profile"><i class="fas fa-user"></i></button>
+                </div>
+              </div>
+            </li>
+            <li class="list-item list-item-user">
+              <div class="list-item-content"><img class="user-avatar" src="images/aronnax.webp" alt="User Avatar">
+                <div class="user-info">
+                  <div class="user-name">Mike Chen</div>
+                  <div class="user-role">Backend Developer</div><span class="badge badge-danger">Offline</span>
+                </div>
+                <div class="user-actions">
+                  <button class="user-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="user-action-btn" title="Profile"><i class="fas fa-user"></i></button>
+                </div>
+              </div>
+            </li>
+            <li class="list-item list-item-user">
+              <div class="list-item-content"><img class="user-avatar" src="images/aronnax-square.webp" alt="User Avatar">
+                <div class="user-info">
+                  <div class="user-name">Alex Johnson</div>
+                  <div class="user-role">Project Manager</div><span class="badge badge-success">Online</span>
+                </div>
+                <div class="user-actions">
+                  <button class="user-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="user-action-btn" title="Profile"><i class="fas fa-user"></i></button>
+                </div>
+              </div>
+            </li>
+            <li class="list-item list-item-user">
+              <div class="list-item-content"><img class="user-avatar" src="images/nautilus.webp" alt="User Avatar">
+                <div class="user-info">
+                  <div class="user-name">Emma Davis</div>
+                  <div class="user-role">QA Engineer</div><span class="badge badge-warning">Busy</span>
+                </div>
+                <div class="user-actions">
+                  <button class="user-action-btn" title="Message"><i class="fas fa-comment"></i></button>
+                  <button class="user-action-btn" title="Profile"><i class="fas fa-user"></i></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <h3 class="mb-2">Account Operations</h3>
+        <div class="card mb-4">
+          <div class="list-header">
+            <h4 class="list-title">Recent Transactions</h4><span class="badge badge-secondary badge-lg">6 transactions</span>
+          </div>
+          <ul class="list list-operations">
+            <li class="list-item list-item-operation">
+              <div class="list-item-content">
+                <div class="operation-icon operation-income"><i class="fas fa-arrow-down"></i></div>
+                <div class="operation-details">
+                  <div class="operation-title">Salary Payment</div>
+                  <div class="operation-description">Monthly salary from Acme Corp</div>
+                  <div class="operation-date">2024-01-15 09:30</div>
+                </div>
+                <div class="operation-amount amount-positive">+$4,500.00</div>
+              </div>
+            </li>
+            <li class="list-item list-item-operation">
+              <div class="list-item-content">
+                <div class="operation-icon operation-expense"><i class="fas fa-arrow-up"></i></div>
+                <div class="operation-details">
+                  <div class="operation-title">Grocery Shopping</div>
+                  <div class="operation-description">Supermarket purchase</div>
+                  <div class="operation-date">2024-01-14 18:45</div>
+                </div>
+                <div class="operation-amount amount-negative">-$127.50</div>
+              </div>
+            </li>
+            <li class="list-item list-item-operation">
+              <div class="list-item-content">
+                <div class="operation-icon operation-transfer"><i class="fas fa-exchange-alt"></i></div>
+                <div class="operation-details">
+                  <div class="operation-title">Transfer to Savings</div>
+                  <div class="operation-description">Monthly savings transfer</div>
+                  <div class="operation-date">2024-01-14 10:00</div>
+                </div>
+                <div class="operation-amount amount-negative">-$500.00</div>
+              </div>
+            </li>
+            <li class="list-item list-item-operation">
+              <div class="list-item-content">
+                <div class="operation-icon operation-payment"><i class="fas fa-credit-card"></i></div>
+                <div class="operation-details">
+                  <div class="operation-title">Credit Card Payment</div>
+                  <div class="operation-description">Monthly credit card bill</div>
+                  <div class="operation-date">2024-01-13 14:20</div>
+                </div>
+                <div class="operation-amount amount-negative">-$1,250.00</div>
+              </div>
+            </li>
+            <li class="list-item list-item-operation">
+              <div class="list-item-content">
+                <div class="operation-icon operation-income"><i class="fas fa-arrow-down"></i></div>
+                <div class="operation-details">
+                  <div class="operation-title">Freelance Payment</div>
+                  <div class="operation-description">Web development project</div>
+                  <div class="operation-date">2024-01-12 16:30</div>
+                </div>
+                <div class="operation-amount amount-positive">+$800.00</div>
+              </div>
+            </li>
+            <li class="list-item list-item-operation">
+              <div class="list-item-content">
+                <div class="operation-icon operation-expense"><i class="fas fa-arrow-up"></i></div>
+                <div class="operation-details">
+                  <div class="operation-title">Restaurant</div>
+                  <div class="operation-description">Dinner with friends</div>
+                  <div class="operation-date">2024-01-11 20:15</div>
+                </div>
+                <div class="operation-amount amount-negative">-$85.75</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Badges</h2>
+        <h3 class="mb-2">Basic Badges</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-primary">Primary</span><span class="badge badge-secondary">Secondary</span><span class="badge badge-success">Success</span><span class="badge badge-danger">Danger</span><span class="badge badge-warning">Warning</span><span class="badge badge-info">Info</span><span class="badge badge-light">Light</span><span class="badge badge-dark">Dark</span></div>
+        </div>
+        <h3 class="mb-2">Outline Badges</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-outline-primary">Primary</span><span class="badge badge-outline-secondary">Secondary</span><span class="badge badge-outline-success">Success</span><span class="badge badge-outline-danger">Danger</span><span class="badge badge-outline-warning">Warning</span><span class="badge badge-outline-info">Info</span></div>
+        </div>
+        <h3 class="mb-2">Badge Sizes</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-sm badge-primary">Small</span><span class="badge badge-primary">Default</span><span class="badge badge-lg badge-primary">Large</span></div>
+        </div>
+        <h3 class="mb-2">Badges with Icons</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-success badge-icon"><i class="fas fa-check"></i><span>Success</span></span><span class="badge badge-danger badge-icon"><i class="fas fa-times"></i><span>Error</span></span><span class="badge badge-warning badge-icon"><i class="fas fa-exclamation"></i><span>Warning</span></span><span class="badge badge-info badge-icon"><i class="fas fa-info"></i><span>Info</span></span></div>
+        </div>
+        <h3 class="mb-2">Dismissible Badges</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-primary badge-dismissible"><span>Primary</span>
+              <button class="badge-close" title="Remove">×</button></span><span class="badge badge-success badge-dismissible"><span>Success</span>
+              <button class="badge-close" title="Remove">×</button></span><span class="badge badge-danger badge-dismissible"><span>Danger</span>
+              <button class="badge-close" title="Remove">×</button></span></div>
+        </div>
+        <h3 class="mb-2">Pill Badges</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-primary badge-pill">Primary</span><span class="badge badge-success badge-pill">Success</span><span class="badge badge-danger badge-pill">Danger</span><span class="badge badge-warning badge-pill">Warning</span></div>
+        </div>
+        <h3 class="mb-2">Animated Badges</h3>
+        <div class="card mb-4">
+          <div class="badge-group mb-2"><span class="badge badge-danger badge-pulse">Live</span><span class="badge badge-success badge-pulse">Active</span><span class="badge badge-warning badge-pulse">Pending</span></div>
+        </div>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Sidebar</h2>
+        <aside class="card sidebar-static">
+          <div class="sidebar-content">
+            <nav>
+              <ul class="sidebar-nav">
+                <li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="#dashboard"><i class="fas fa-tachometer-alt sidebar-nav-icon"></i><span class="sidebar-nav-text">Dashboard</span></a></li>
+                <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#projects"><i class="fas fa-folder sidebar-nav-icon"></i><span class="sidebar-nav-text">Projects</span><span class="sidebar-nav-badge">3</span></a></li>
+                <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#tasks"><i class="fas fa-tasks sidebar-nav-icon"></i><span class="sidebar-nav-text">Tasks</span></a></li>
+                <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#team"><i class="fas fa-users sidebar-nav-icon"></i><span class="sidebar-nav-text">Team</span></a></li>
+                <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#settings"><i class="fas fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-text">Settings</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
       </section>
       <input class="modal-toggle" type="checkbox" id="modal-toggle">
       <div class="modal">
         <label class="modal-overlay" for="modal-toggle"></label>
         <div class="modal-content">
-          <h3>Pure CSS Modal</h3>
-          <p>This modal opens and closes without any JavaScript.</p>
-          <label class="btn" for="modal-toggle">Close</label>
+          <div class="modal-header">
+            <h3 class="modal-title">Confirmation</h3>
+            <label class="modal-close" for="modal-toggle"><i class="fas fa-times"></i></label>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+          </div>
+          <div class="modal-footer">
+            <label class="btn btn-secondary" for="modal-toggle">Cancel</label>
+            <button class="btn btn-danger">Delete Item</button>
+          </div>
         </div>
       </div>
       <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle">
       <div class="sidebar">
-        <h3>Sidebar Menu</h3>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
-        <label class="sidebar-close" for="sidebar-toggle">Close</label>
+        <div class="sidebar-header">
+          <h3 class="sidebar-title">Navigation</h3>
+          <label class="sidebar-close" for="sidebar-toggle"><i class="fas fa-times"></i></label>
+        </div>
+        <div class="sidebar-content">
+          <nav>
+            <ul class="sidebar-nav">
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="#dashboard"><i class="fas fa-tachometer-alt sidebar-nav-icon"></i><span class="sidebar-nav-text">Dashboard</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#projects"><i class="fas fa-folder sidebar-nav-icon"></i><span class="sidebar-nav-text">Projects</span><span class="sidebar-nav-badge">3</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#tasks"><i class="fas fa-tasks sidebar-nav-icon"></i><span class="sidebar-nav-text">Tasks</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#team"><i class="fas fa-users sidebar-nav-icon"></i><span class="sidebar-nav-text">Team</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#settings"><i class="fas fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-text">Settings</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar-footer">
+          <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin: 0;">Version 0.3.0</p>
+        </div>
       </div>
       <label class="sidebar-overlay" for="sidebar-toggle"></label>
     </div>
