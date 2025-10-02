@@ -221,20 +221,69 @@
       <div class="modal">
         <label class="modal-overlay" for="modal-toggle"></label>
         <div class="modal-content">
-          <h3>Pure CSS Modal</h3>
-          <p>This modal opens and closes without any JavaScript.</p>
-          <label class="btn" for="modal-toggle">Close</label>
+          <div class="modal-header">
+            <h3 class="modal-title">Confirmation</h3>
+            <label class="modal-close" for="modal-toggle">
+              <svg class="modal-close-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+            </label>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+          </div>
+          <div class="modal-footer">
+            <label class="btn btn-secondary" for="modal-toggle">Cancel</label>
+            <button class="btn btn-danger">Delete Item</button>
+          </div>
         </div>
       </div>
       <input class="sidebar-toggle" type="checkbox" id="sidebar-toggle">
       <div class="sidebar">
-        <h3>Sidebar Menu</h3>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
-        <label class="sidebar-close" for="sidebar-toggle">Close</label>
+        <div class="sidebar-header">
+          <h3 class="sidebar-title">Navigation</h3>
+          <label class="sidebar-close" for="sidebar-toggle">
+            <svg class="sidebar-close-icon" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+          </label>
+        </div>
+        <div class="sidebar-content">
+          <nav>
+            <ul class="sidebar-nav">
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="#dashboard">
+                  <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                    <path d="M8 5v4"></path>
+                  </svg><span class="sidebar-nav-text">Dashboard</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#projects">
+                  <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                    <path d="M8 5v4"></path>
+                  </svg><span class="sidebar-nav-text">Projects</span><span class="sidebar-nav-badge">3</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#tasks">
+                  <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
+                    <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
+                  </svg><span class="sidebar-nav-text">Tasks</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#team">
+                  <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+                  </svg><span class="sidebar-nav-text">Team</span></a></li>
+              <li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#settings">
+                  <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
+                  </svg><span class="sidebar-nav-text">Settings</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar-footer">
+          <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin: 0;">Version 1.0.0</p>
+        </div>
       </div>
       <label class="sidebar-overlay" for="sidebar-toggle"></label>
     </div>
