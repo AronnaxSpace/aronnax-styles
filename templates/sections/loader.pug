@@ -1,0 +1,45 @@
+//- Loader Section
+section.mb-4
+  h2.mb-2 Loaders
+  
+  //- Spinner Loaders
+  h3.mb-2 Spinner Loaders
+  .card.mb-4
+    .loader-group
+      .loader.loader-spinner.loader-spinner-sm
+      .loader.loader-spinner
+      .loader.loader-spinner.loader-spinner-lg
+
+  //- Inline Loaders
+  h3.mb-2 Inline Loaders
+  .card.mb-4
+    p.mb-2 These loaders can be used inline with text:
+    p.mb-2
+      | Processing your request 
+      .loader.loader-dots(style="display: inline-flex; margin-left: var(--space-2);")
+        .loader-dot
+        .loader-dot
+        .loader-dot
+    p.mb-2
+      | Uploading files 
+      .loader.loader-spinner.loader-spinner-sm(style="margin-left: var(--space-2);")
+    p.mb-2
+      | Syncing data 
+      .loader.loader-pulse.loader-pulse-sm(style="margin-left: var(--space-2);")
+
+  style.
+    .loader-group {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+    
+    .skeleton-demo {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+    }
+    
+    .skeleton-content {
+      flex: 1;
+    }

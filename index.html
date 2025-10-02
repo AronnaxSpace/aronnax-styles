@@ -555,6 +555,51 @@
         </div>
       </section>
       <section class="mb-4">
+        <h2 class="mb-2">Loaders</h2>
+        <h3 class="mb-2">Spinner Loaders</h3>
+        <div class="card mb-4">
+          <div class="loader-group">
+            <div class="loader loader-spinner loader-spinner-sm"></div>
+            <div class="loader loader-spinner"></div>
+            <div class="loader loader-spinner loader-spinner-lg"></div>
+          </div>
+        </div>
+        <h3 class="mb-2">Inline Loaders</h3>
+        <div class="card mb-4">
+          <p class="mb-2">These loaders can be used inline with text:</p>
+          <p class="mb-2">Processing your request 
+            <div class="loader loader-dots" style="display: inline-flex; margin-left: var(--space-2);">
+              <div class="loader-dot"></div>
+              <div class="loader-dot"></div>
+              <div class="loader-dot"></div>
+            </div>
+          </p>
+          <p class="mb-2">Uploading files 
+            <div class="loader loader-spinner loader-spinner-sm" style="margin-left: var(--space-2);"></div>
+          </p>
+          <p class="mb-2">Syncing data 
+            <div class="loader loader-pulse loader-pulse-sm" style="margin-left: var(--space-2);"></div>
+          </p>
+        </div>
+        <style>
+          .loader-group {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+          }
+          
+          .skeleton-demo {
+            display: flex;
+            gap: var(--space-3);
+            align-items: flex-start;
+          }
+          
+          .skeleton-content {
+            flex: 1;
+          }
+        </style>
+      </section>
+      <section class="mb-4">
         <h2 class="mb-2">Sidebar</h2>
         <aside class="card sidebar-static">
           <div class="sidebar-content">
