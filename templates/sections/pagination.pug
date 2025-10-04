@@ -1,0 +1,69 @@
+//- Pagination Section
+section.mb-4
+  h2.mb-2 Pagination
+  
+  //- Basic Pagination
+  h3.mb-2 Basic Pagination
+  .card.mb-4
+    ul.pagination
+      li.pagination-item
+        a.pagination-link.disabled(href="#") Previous
+      li.pagination-item
+        a.pagination-link(href="#") 1
+      li.pagination-item
+        a.pagination-link.active(href="#") 2
+      li.pagination-item
+        a.pagination-link(href="#") 3
+      li.pagination-item
+        a.pagination-link(href="#") 4
+      li.pagination-item
+        a.pagination-link(href="#") 5
+      li.pagination-item
+        a.pagination-link(href="#") Next
+
+  //- Pagination with Info
+  h3.mb-2 Pagination with Info
+  .card.mb-4
+    .d-flex.justify-content-between.align-items-center
+      ul.pagination
+        li.pagination-item
+          a.pagination-link.disabled(href="#") ‹
+        li.pagination-item
+          a.pagination-link(href="#") 1
+        li.pagination-item
+          a.pagination-link.active(href="#") 2
+        li.pagination-item
+          a.pagination-link(href="#") 3
+        li.pagination-item
+          a.pagination-link(href="#") ›
+      span.pagination-info Showing 11-20 of 100 results
+
+  //- Small Pagination
+  h3.mb-2 Small Pagination
+  .card.mb-4
+    ul.pagination.pagination-sm
+      li.pagination-item
+        a.pagination-link.disabled(href="#") ‹
+      li.pagination-item
+        a.pagination-link(href="#") 1
+      li.pagination-item
+        a.pagination-link.active(href="#") 2
+      li.pagination-item
+        a.pagination-link(href="#") 3
+      li.pagination-item
+        a.pagination-link(href="#") ›
+
+  //- Large Pagination
+  h3.mb-2 Large Pagination
+  .card.mb-4
+    ul.pagination.pagination-lg
+      li.pagination-item
+        a.pagination-link.disabled(href="#") Previous
+      li.pagination-item
+        a.pagination-link(href="#") 1
+      li.pagination-item
+        a.pagination-link.active(href="#") 2
+      li.pagination-item
+        a.pagination-link(href="#") 3
+      li.pagination-item
+        a.pagination-link(href="#") Next

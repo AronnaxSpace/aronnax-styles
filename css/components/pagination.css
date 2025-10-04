@@ -1,0 +1,90 @@
+/**
+ * Aronnax Styles: Pagination Components
+ */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-item {
+  display: flex;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-color);
+  text-decoration: none;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.pagination-link:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.pagination-link.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.pagination-link.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-link.disabled:hover {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* Pagination Sizes */
+.pagination-sm .pagination-link {
+  min-width: 2rem;
+  height: 2rem;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.pagination-lg .pagination-link {
+  min-width: 3rem;
+  height: 3rem;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+}
+
+/* Pagination Info */
+.pagination-info {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin-left: var(--space-4);
+}
+
+/* Responsive Pagination */
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+  
+  .pagination-link {
+    min-width: 2rem;
+    height: 2rem;
+    padding: var(--space-1);
+    font-size: var(--font-size-sm);
+  }
+}

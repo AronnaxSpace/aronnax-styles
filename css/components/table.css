@@ -1,0 +1,75 @@
+/**
+ * Aronnax Styles: Table Components
+ */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+  background-color: var(--secondary-color);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-color);
+}
+
+.table tbody tr:hover {
+  background-color: var(--secondary-color);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table Striped */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+
+/* Table Bordered */
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--border-color);
+}
+
+/* Table Hover */
+.table-hover tbody tr:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Table Sizes */
+.table-sm th,
+.table-sm td {
+  padding: var(--space-2) var(--space-3);
+}
+
+.table-lg th,
+.table-lg td {
+  padding: var(--space-4) var(--space-5);
+}
+
+/* Responsive Table */
+.table-responsive {
+  overflow-x: auto;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: var(--font-size-sm);
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--space-2);
+  }
+}

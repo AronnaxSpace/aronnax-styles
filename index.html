@@ -555,6 +555,202 @@
         </div>
       </section>
       <section class="mb-4">
+        <h2 class="mb-2">Loaders</h2>
+        <h3 class="mb-2">Spinner Loaders</h3>
+        <div class="card mb-4">
+          <div class="loader-group">
+            <div class="loader loader-spinner loader-spinner-sm"></div>
+            <div class="loader loader-spinner"></div>
+            <div class="loader loader-spinner loader-spinner-lg"></div>
+          </div>
+        </div>
+        <h3 class="mb-2">Inline Loaders</h3>
+        <div class="card mb-4">
+          <p class="mb-2">These loaders can be used inline with text:</p>
+          <p class="mb-2">Processing your request 
+            <div class="loader loader-dots" style="display: inline-flex; margin-left: var(--space-2);">
+              <div class="loader-dot"></div>
+              <div class="loader-dot"></div>
+              <div class="loader-dot"></div>
+            </div>
+          </p>
+          <p class="mb-2">Uploading files 
+            <div class="loader loader-spinner loader-spinner-sm" style="margin-left: var(--space-2);"></div>
+          </p>
+          <p class="mb-2">Syncing data 
+            <div class="loader loader-pulse loader-pulse-sm" style="margin-left: var(--space-2);"></div>
+          </p>
+        </div>
+        <style>
+          .loader-group {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+          }
+          
+          .skeleton-demo {
+            display: flex;
+            gap: var(--space-3);
+            align-items: flex-start;
+          }
+          
+          .skeleton-content {
+            flex: 1;
+          }
+        </style>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Tables</h2>
+        <h3 class="mb-2">Basic Table</h3>
+        <div class="table-responsive mb-4">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>Frontend Developer</td>
+                <td><span class="badge badge-success">Online</span></td>
+                <td>
+                  <button class="btn btn-sm">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Sarah Wilson</td>
+                <td>UI/UX Designer</td>
+                <td><span class="badge badge-warning">Away</span></td>
+                <td>
+                  <button class="btn btn-sm">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mike Chen</td>
+                <td>Backend Developer</td>
+                <td><span class="badge badge-danger">Offline</span></td>
+                <td>
+                  <button class="btn btn-sm">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="mb-2">Striped Table</h3>
+        <div class="table-responsive mb-4">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aronnax Design System</td>
+                <td>$29.99</td>
+                <td>15</td>
+                <td>Technology</td>
+              </tr>
+              <tr>
+                <td>Nautilus UI Kit</td>
+                <td>$49.99</td>
+                <td>8</td>
+                <td>Design</td>
+              </tr>
+              <tr>
+                <td>Premium Package</td>
+                <td>$99.99</td>
+                <td>3</td>
+                <td>Bundle</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="mb-2">Small Table</h3>
+        <div class="table-responsive mb-4">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sarah Wilson</td>
+                <td>sarah@example.com</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mike Chen</td>
+                <td>mike@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="mb-4">
+        <h2 class="mb-2">Pagination</h2>
+        <h3 class="mb-2">Basic Pagination</h3>
+        <div class="card mb-4">
+          <ul class="pagination">
+            <li class="pagination-item"><a class="pagination-link disabled" href="#">Previous</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+            <li class="pagination-item"><a class="pagination-link active" href="#">2</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">4</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">5</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">Next</a></li>
+          </ul>
+        </div>
+        <h3 class="mb-2">Pagination with Info</h3>
+        <div class="card mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <ul class="pagination">
+              <li class="pagination-item"><a class="pagination-link disabled" href="#">‹</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+              <li class="pagination-item"><a class="pagination-link active" href="#">2</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">›</a></li>
+            </ul><span class="pagination-info">Showing 11-20 of 100 results</span>
+          </div>
+        </div>
+        <h3 class="mb-2">Small Pagination</h3>
+        <div class="card mb-4">
+          <ul class="pagination pagination-sm">
+            <li class="pagination-item"><a class="pagination-link disabled" href="#">‹</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+            <li class="pagination-item"><a class="pagination-link active" href="#">2</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">›</a></li>
+          </ul>
+        </div>
+        <h3 class="mb-2">Large Pagination</h3>
+        <div class="card mb-4">
+          <ul class="pagination pagination-lg">
+            <li class="pagination-item"><a class="pagination-link disabled" href="#">Previous</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+            <li class="pagination-item"><a class="pagination-link active" href="#">2</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+            <li class="pagination-item"><a class="pagination-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="mb-4">
         <h2 class="mb-2">Sidebar</h2>
         <aside class="card sidebar-static">
           <div class="sidebar-content">
