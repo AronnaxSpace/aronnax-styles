@@ -178,3 +178,38 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* Mobile menu toggle button */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: calc(var(--z-modal-content) + 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: background-color var(--transition-fast);
+}
+
+.menu-toggle:hover {
+  background: var(--primary-dark, #1a56db);
+}
+
+.menu-toggle i {
+  font-size: 1.25rem;
+}
+
+/* Hide toggle button on larger screens */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}

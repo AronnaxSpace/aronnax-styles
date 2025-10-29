@@ -8,19 +8,28 @@ html(lang="en")
     link(rel="stylesheet" href="dist/aronnax-styles.css")
 
   body
+    //- Mobile menu toggle button
+    label.menu-toggle(for="sidebar-toggle")
+      i.fas.fa-bars
+
+    //- Navigation Sidebar
+    include sidebar
+
     .container
-      include sections/buttons
-      include sections/forms
-      include sections/cards
-      include sections/lists
-      include sections/badges
-      include sections/loader
-      include sections/table
-      include sections/pagination
       include sections/sidebar_static
 
-      //- Modals & Sidebars
-      include modal
-      include sidebar
+      main.main
+        include sections/welcome
+        include sections/buttons
+        include sections/forms
+        include sections/cards
+        include sections/lists
+        include sections/badges
+        include sections/loader
+        include sections/table
+        include sections/pagination
+
+    //- Modal
+    include modal
 
     script(src="dist/aronnax-styles.js")

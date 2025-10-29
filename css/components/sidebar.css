@@ -23,8 +23,7 @@
 }
 
 .sidebar-static {
-  max-height: calc(100vh - 2rem);
-  overflow-y: auto;
+  display: none;
 }
 
 /* Custom scrollbar for static sidebar */
@@ -194,5 +193,17 @@
   .sidebar-right {
     width: 100%;
     max-width: 280px;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar-static {
+    display: block;
+    position: sticky;
+    top: var(--space-4, 1rem);
+    width: var(--sidebar-width, 280px);
+    max-height: calc(100vh - 2rem);
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    overflow-y: auto;
   }
 }
